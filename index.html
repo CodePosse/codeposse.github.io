@@ -2,19 +2,23 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>CodePosse GitHub</title>
+<title>CodePosse</title>
 <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
 <link href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
-
 <body>
-<h1>CodePosse GitHub</h1>
-<a href="//www.ItsSoBig.com" title="Home Page">Home Page</a>
+<div class="nobody_cares">
+<h1></h1>
+<a href="//github.com/codeposse">My Repos</a> | <a href="javascript:alert('FACEPALM\nYou suck at hints');">Console.Log</a></div>
 <script>
 $(document).ready(function(){
-	console.log('Yeah, I got a GitHub and this is a stupid dev trick. If you saw this in console, congrats, if you saw this in view-source, bite me.');
+    var title = $(this).attr('title');
+	$('h1').html(title + " GitHub");
+	a = { Name: "Tim Hunold", Location: "LA", Experience: "18 years", Phone: "310.929.7155", Site_Personal: "ItsSoBig.com", Site_Professional: "linkedin.com/in/itssobig", Email: title + '@gmail.com', Specialties: "HTML, CSS, jQuery, JavaScript, Grunt, SASS, CMS" };
+	console.info('Yeah, I got a GitHub and this is a stupid dev trick. If you saw this in console, congrats. If you saw this in view-source, bite me. ' + 'Now look at the object.');
+	console.dir(a);
 });
 </script>
 </body>
