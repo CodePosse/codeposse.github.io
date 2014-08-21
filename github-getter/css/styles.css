@@ -1,0 +1,19 @@
+td {
+    padding: 5px;
+}
+th {
+    text-align: left;
+}
+
+.details-container {
+    background-color: #999999;
+    width: 100%;
+}
+
+.list-item {
+    cursor: pointer;
+}
+
+.name, .description, .owner, .language, .url, .watchers {
+
+}
