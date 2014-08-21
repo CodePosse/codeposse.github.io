@@ -11,7 +11,8 @@ label {
 }
 
 input {
-    font-size: 12em;
+    font-size: 1em;
     text-align: center;
-    min-width: 1em;
+    min-width: 0.75em;
 }
+.wrapper{width:75%;margin:0 auto;padding:2em}
