@@ -11,9 +11,13 @@ th {
 }
 
 .list-item {
-    cursor: pointer;
+    /*Add Styles here*/
+}
+
+.name-label, .description-label, .owner-label, .language-label, .url-label, .watchers-label {
+    /*Add Styles here*/
 }
 
 .name, .description, .owner, .language, .url, .watchers {
-
+    /*Add Styles here*/
 }

@@ -104,7 +104,7 @@
                                 result = self.ui.renderList(result);
                                 self.ui.$listContainer.html(result);
 
-                                $('.list-item').on(self.ui.events.CLICK, self.ui.itemSelectEventHandler);
+                                $('.list-item > td > button').on(self.ui.events.CLICK, self.ui.itemSelectEventHandler);
                             },
                             function (error) {
                                 self.ui.$error = error;
@@ -115,7 +115,8 @@
                     }
 
                     self.ui.itemSelectEventHandler = function (event) {
-                        var index = event.currentTarget.attributes['data-index'].value;
+                        // HACK not good to use parentElements, but a quick fix
+                        var index = event.currentTarget.parentElement.parentElement.attributes['data-index'].value;
                         index = Number(index);
                         var item = self.data.cache[index];
                         self.ui.$rootContainer.trigger(self.ui.events.REPOSITORY_SELECT, { data: item });
@@ -168,6 +169,7 @@
                                 '<td><span class="name">{{data.name}}</span></td>' +
                                 '<td><span class="owner">{{data.owner}}</span></td>' +
                                 '<td><span class="language">{{data.language}}</span></td>' +
+                                '<td><button type="button">Show</button></td>' +
                             '</tr>'),
                         repositoryDetails: _.template('' +
                             '<table>' +
