@@ -754,8 +754,8 @@ input[type="color"]:focus {
 @media (max-width: 479px) {	
 	.container {width:310px;margin:0;padding:0}
 	
-	#right_block {width:290px;padding-left:10px;padding-right:10px;}
-	#left_content {width:290px;padding-left:10px;padding-right:10px;}
+	#right_block {width:300px;padding-left:10px;padding-right:10px;}
+	#left_content {width:300px;padding-left:10px;padding-right:10px;}
 	
 /* __________ Menu __________ */
 	.menu_block {margin:0 -10px 30px;}
