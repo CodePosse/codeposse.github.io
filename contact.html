@@ -7,10 +7,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	
 	<link href="img/favicon.ico" rel="icon" type="img/ico">
-    <link rel="prev" href="index.html" />
-	<link rel="next" href="repos.html" />
+    <link rel="prev" href="repos.html" />
+	<link rel="next" href="/" />
 	<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen"/>
 	<link rel="stylesheet" href="css/theme.css" type="text/css" media="screen"/>
 
@@ -85,13 +84,38 @@
 				
 				<div class="contact_container">
 					<div class="row">
-					  <div class="span6">
-					    <h2 class="title">You have all the info you need</h2>
+						<div class="span3 contact_inf">
+							<h2 class="title">Address</h2>
+							<p>Beverly Hills, CA 90210</p>
+							<h2 class="title">Phone</h2>
+							<p>1.310.929.7155</p>
+							<h2 class="title">Email</h2>
+							<p class="eml"></p>
+							<h2 class="title">Website</h2>
+							<p class="myUrl"></p>
+						</div>
+						<div class="span6">
+							<h2 class="title">Contact Form <sup>(inactive)</sup></h2>
 							<div class="contact_form">  
-								If you know what to look for, if you are a dev.
+								<div id="note"></div>
+								<div id="fields">
+									<form id="ajax-contact-form" action="">
+										<input class="first" type="text" name="name" value="Name" onFocus="if (this.value == 'Name') this.value = '';" onBlur="if (this.value == '') this.value = 'Name';" />
+										<input type="text" name="email" value="Email" onFocus="if (this.value == 'Email') this.value = '';" onBlur="if (this.value == '') this.value = 'Email';" />
+										<textarea name="message" id="message" onFocus="if (this.value == 'Message') this.value = '';" onBlur="if (this.value == '') this.value = 'Message';">Message</textarea>
+										<div class="clear"></div>
+										<input type="submit" disabled class="contact_btn" value="Disabled" />
+										<div class="clear"></div>
+									</form>
+								</div>
 							</div>
 						</div>
 						<div class="clear"></div>
+						<div class="span9">
+							<h2 class="title">Contact Information</h2>
+							<p>I get called. A LOT. so sending me an email using the link on the left there as opposed to a form, that GitHub won't support, and quite ffrankly, I'm too busy to make in to a JavaScript to email form.</p>
+							<p>I am really busy, like I just said, so if you have questions about my code, like you can't figure out how to use it for your self, just hit StackOverflow, please.</p>
+						</div>
 						<div class="clear"></div>
 					</div>
 				</div>
