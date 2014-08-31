@@ -697,10 +697,10 @@ input[type="color"]:focus {
 }
 
 @media (max-width: 767px) {
-	.container {width:470px;padding:0;margin:0;}
-	#right_block {float:none;width:430px;}
+	.container {width:99%;padding:0;margin:0;}
+	#right_block {float:none;width:99%;}
 	.author_foto, #copyright, .projects_block, .noMobile {display:none}
-	#left_content {float:none;width:430px;}
+	#left_content {float:none;width:99%;}
 	
 /* __________ Index __________ */
 	.author_foto {float:left;width:240px;margin-right:20px;}
@@ -752,10 +752,10 @@ input[type="color"]:focus {
 }
 
 @media (max-width: 479px) {	
-	.container {width:310px;margin:0;padding:0}
+	.container {width:99%;margin:0;padding:0}
 	
-	#right_block {width:300px;padding-left:10px;padding-right:10px;}
-	#left_content {width:300px;padding-left:10px;padding-right:10px;}
+	#right_block {width:99%;padding-left:10px;padding-right:10px;}
+	#left_content {width:99%;padding-left:10px;padding-right:10px;}
 	
 /* __________ Menu __________ */
 	.menu_block {margin:0 -10px 30px;}
