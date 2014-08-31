@@ -68,7 +68,7 @@ $(window).resize(function(){
 
 
 
-function vertAlign(){
+/*function vertAlign(){
 	if ($(window).width()>979){
 		var body_h = $(window).height();
 		var container_h = $('.wrap').height();	
@@ -76,4 +76,4 @@ function vertAlign(){
 		$('.wrap').css('padding-top', padding_top);
 		$('.wrap').css('padding-bottom', padding_top);
 	}
-}
+}*/
