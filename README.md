@@ -2,4 +2,4 @@ codeposse.github.io
 ===================
 
 Public Page
-go to http://codeposse.github.io/
+go to //codeposse.github.io/
