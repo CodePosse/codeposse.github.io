@@ -15,19 +15,19 @@ $(document).ready(function() {
   };
   console.info(
     '%c Yeah, I got a GitHub and this is a stupid dev trick. If you saw this in console, congrats. If you saw this in view-source, bite me. ' +
-      'Now expand the object below.', 'background: #222; color: #bada55'
+      'Now expand the object below.','background: #222; color: #bada55'
   );
   console.dir(a);
   $(".eml").append(
     "<a href='mailto:" +
       title +
-      "@gmail.com?subject=Contact from GitHub&body=Say Something'>" +
+      "@gmail.com?subject=Contact from GitHub&body=Say Something' alt='My contact email'>" +
       title +
       "@gmail.com</a>"
   );
-  $(".myUrl").append("<a href='http://" + myUrl + "/'>" + myUrl + "</a>");
+  $(".myUrl").append("<a href='http://" + myUrl + "/' alt='my site' target='_blank'>" + myUrl + "</a>");
   $(".myName").append(myName);
-
+console.log('written in jQuery for the lolz','color: blue');
   //Menu respond
   if ($(window).width() < 480) {
     $(".menu_btn a").click(function() {
