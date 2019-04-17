@@ -3,6 +3,7 @@ var cheerio = require("gulp-cheerio"); //use jquery in gulp
 var gutil = require("gulp-util"); //utilities
 var htmlmin = require("gulp-htmlmin"); //html uglify
 var plumber = require("gulp-plumber"); //error handler
+var prettify = require("gulp-prettify"); //error handler
 var sass = require("gulp-sass"); //scss/sass task
 var sourcemaps = require("gulp-sourcemaps");
 var uglify = require("gulp-uglify");
@@ -17,7 +18,7 @@ gulp.task("default", async function() {
 
 gulp.task("miniHTML", async function() {
   gulp
-    .src("src/html/*.html") //DUDE, CHANGE ME
+    .src("**/*.html") //DUDE, CHANGE ME
     .pipe(plumber())
     .pipe(
       cheerio(function($, file) {
@@ -27,12 +28,13 @@ gulp.task("miniHTML", async function() {
     .pipe(
       htmlmin({
         collapseWhitespace: true,
-        removeComments: true,
+        removeComments: false,
         minifyCSS: true,
         minifyJS: true
       })
     )
-    .pipe(gulp.dest("./prod/html/")); //DUDE, CHANGE ME
+    .pipe(prettify())
+    .pipe(gulp.dest("./")); //DUDE, CHANGE ME
 });
 
 gulp.task("sass", async function() {
