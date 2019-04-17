@@ -27,7 +27,6 @@ $(document).ready(function() {
   );
   $(".myUrl").append("<a href='http://" + myUrl + "/' alt='my site' target='_blank'>" + myUrl + "</a>");
   $(".myName").append(myName);
-console.log('written in jQuery for the lolz','color: blue');
   //Menu respond
   if ($(window).width() < 480) {
     $(".menu_btn a").click(function() {
@@ -67,7 +66,7 @@ console.log('written in jQuery for the lolz','color: blue');
     info.stop().animate({ opacity: 1 }, 500);
   });
 });
-
+console.log('written in jQuery for the lolz','color: blue');
 /*$(window).load(function(){
 	vertAlign();
 	
