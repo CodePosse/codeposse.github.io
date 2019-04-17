@@ -5,17 +5,17 @@ $(document).ready(function() {
   var myName = "Tim Hunold";
   a = {
     Name: "Tim Hunold",
-    Location: "LA",
-    Experience: "18 years",
-    Phone: "310.929.7155",
+    Location: "LA, and sometimes Vegas",
+    Experience: "20+ years",
+    Phone: "310-929-7155",
     Site_Personal: "ItsSoBig.com",
     Site_Professional: "linkedin.com/in/itssobig",
     Email: title + "@gmail.com",
-    Specialties: "HTML, CSS, jQuery, JavaScript, Grunt, SASS, CMS"
+    Specialties: "HTML, jQuery, JavaScript, Gulp, CSS/SASS/SCSS, CMS, NGx (Angular 2- x), WebPack"
   };
   console.info(
-    "Yeah, I got a GitHub and this is a stupid dev trick. If you saw this in console, congrats. If you saw this in view-source, bite me. " +
-      "Now look at the object."
+    '%c Yeah, I got a GitHub and this is a stupid dev trick. If you saw this in console, congrats. If you saw this in view-source, bite me. ' +
+      'Now expand the object below.', 'background: #222; color: #bada55'
   );
   console.dir(a);
   $(".eml").append(
