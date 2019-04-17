@@ -1,0 +1,19 @@
+{
+  "name": "codeposse.github.io",
+  "version": "1.2.0",
+  "description": "My GitPage",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodePosse/codeposse.github.io.git"
+  },
+  "author": "Tim Hunold",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodePosse/codeposse.github.io/issues"
+  },
+  "homepage": "https://github.com/CodePosse/codeposse.github.io#readme"
+}
