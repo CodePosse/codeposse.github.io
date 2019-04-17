@@ -14,7 +14,7 @@ $(document).ready(function() {
     Specialties: "HTML, jQuery, JavaScript, Gulp, CSS/SASS/SCSS, CMS, NGx (Angular 2- x), WebPack"
   };
   console.info(
-    '%c Yeah, I got a GitHub and this is a stupid dev trick. If you saw this in console, congrats. If you saw this in view-source, bite me. ' +
+    '%c Yeah, I got a GitHub and this is a stupid dev trick in jQuery (eek!). If you saw this in console, congrats. If you saw this in view-source, bite me. ' +
       'Now expand the object below.','background: #222; color: #bada55'
   );
   console.dir(a);
@@ -66,7 +66,6 @@ $(document).ready(function() {
     info.stop().animate({ opacity: 1 }, 500);
   });
 });
-console.log('written in jQuery for the lolz','color: blue');
 /*$(window).load(function(){
 	vertAlign();
 	
