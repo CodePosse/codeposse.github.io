@@ -11,11 +11,13 @@ $(document).ready(function() {
     Site_Personal: "ItsSoBig.com",
     Site_Professional: "linkedin.com/in/itssobig",
     Email: title + "@gmail.com",
-    Specialties: "HTML, jQuery, JavaScript, Gulp, CSS/SASS/SCSS, CMS, NGx (Angular 2- x), WebPack"
+    Specialties:
+      "HTML, jQuery, JavaScript, Gulp, CSS/SASS/SCSS, CMS, NGx (Angular 2- x), WebPack"
   };
   console.info(
-    '%c Yeah, I got a GitHub and this is a stupid dev trick in jQuery (eek!). If you saw this in console, congrats. If you saw this in view-source, bite me. ' +
-      'Now expand the object below.','background: #222; color: #bada55'
+    "%c Yeah, I got a GitHub and this is a stupid dev trick in jQuery (eek!). If you saw this in console, congrats. If you saw this in view-source, bite me. " +
+      "Now expand the object below.",
+    "background: #222; color: #bada55"
   );
   console.dir(a);
   $(".eml").append(
@@ -25,7 +27,13 @@ $(document).ready(function() {
       title +
       "@gmail.com</a>"
   );
-  $(".myUrl").append("<a href='http://" + myUrl + "/' alt='my site' target='_blank'>" + myUrl + "</a>");
+  $(".myUrl").append(
+    "<a href='http://" +
+      myUrl +
+      "/' alt='my site' target='_blank'>" +
+      myUrl +
+      "</a>"
+  );
   $(".myName").append(myName);
   //Menu respond
   if ($(window).width() < 480) {
