@@ -1,0 +1,767 @@
+[
+  {
+    "competition": 0.509134433665,
+    "concept_name": "system",
+    "group_name": "miscellaneous",
+    "keyword": "transportation management system",
+    "keyword_volume": 6980.66666667,
+    "max_bid": 17.22,
+    "min_bid": 1.172562
+  },
+  {
+    "competition": 0.15574650913,
+    "concept_name": "oracle",
+    "group_name": "miscellaneous brands",
+    "keyword": "oracle transportation management",
+    "keyword_volume": 1534.83333333,
+    "max_bid": 20.21,
+    "min_bid": 3.695638
+  },
+  {
+    "competition": 0.15574650913,
+    "concept_name": "system",
+    "group_name": "miscellaneous",
+    "keyword": "oracle transportation management",
+    "keyword_volume": 1534.83333333,
+    "max_bid": 20.21,
+    "min_bid": 3.695638
+  },
+  {
+    "competition": 0.583041191937,
+    "concept_name": "logistics",
+    "group_name": "miscellaneous",
+    "keyword": "transportation management services",
+    "keyword_volume": 354.833333333,
+    "max_bid": 5.957897,
+    "min_bid": 1.02811
+  },
+  {
+    "competition": 0.20230700976,
+    "concept_name": "oracle",
+    "group_name": "miscellaneous brands",
+    "keyword": "oracle transportation management cloud",
+    "keyword_volume": 162,
+    "max_bid": 37.78,
+    "min_bid": 7.87
+  },
+  {
+    "competition": 0.20230700976,
+    "concept_name": "system",
+    "group_name": "miscellaneous",
+    "keyword": "oracle transportation management cloud",
+    "keyword_volume": 162,
+    "max_bid": 37.78,
+    "min_bid": 7.87
+  },
+  {
+    "competition": 0.20230700976,
+    "concept_name": "cloud",
+    "group_name": "miscellaneous",
+    "keyword": "oracle transportation management cloud",
+    "keyword_volume": 162,
+    "max_bid": 37.78,
+    "min_bid": 7.87
+  },
+  {
+    "competition": 0.0379338175948,
+    "concept_name": "gts freight",
+    "group_name": "miscellaneous brands",
+    "keyword": "gts freight management",
+    "keyword_volume": 135.5,
+    "max_bid": 4.526327,
+    "min_bid": 1.992158
+  },
+  {
+    "competition": 0.0379338175948,
+    "concept_name": "companies",
+    "group_name": "miscellaneous",
+    "keyword": "gts freight management",
+    "keyword_volume": 135.5,
+    "max_bid": 4.526327,
+    "min_bid": 1.992158
+  },
+  {
+    "competition": 0.0379338175948,
+    "concept_name": "freight",
+    "group_name": "miscellaneous",
+    "keyword": "gts freight management",
+    "keyword_volume": 135.5,
+    "max_bid": 4.526327,
+    "min_bid": 1.992158
+  },
+  {
+    "competition": 0.436050860135,
+    "concept_name": "system",
+    "group_name": "miscellaneous",
+    "keyword": "tms transport management system",
+    "keyword_volume": 122.5,
+    "max_bid": 5.007537,
+    "min_bid": 1.316205
+  },
+  {
+    "competition": 0.575630252101,
+    "concept_name": "system",
+    "group_name": "miscellaneous",
+    "keyword": "top transportation management systems",
+    "keyword_volume": 115.416666667,
+    "max_bid": 20.57,
+    "min_bid": 5.24236
+  },
+  {
+    "competition": 0.197802197802,
+    "concept_name": "schneider transportation",
+    "group_name": "miscellaneous brands",
+    "keyword": "schneider transportation management",
+    "keyword_volume": 94.75,
+    "max_bid": 8.14,
+    "min_bid": 5
+  },
+  {
+    "competition": 0.197802197802,
+    "concept_name": "companies",
+    "group_name": "miscellaneous",
+    "keyword": "schneider transportation management",
+    "keyword_volume": 94.75,
+    "max_bid": 8.14,
+    "min_bid": 5
+  },
+  {
+    "competition": 0.509803921569,
+    "concept_name": "companies",
+    "group_name": "miscellaneous",
+    "keyword": "transportation management companies",
+    "keyword_volume": 87.6666666667,
+    "max_bid": 10.69,
+    "min_bid": 1.978742
+  },
+  {
+    "competition": 0.509803921569,
+    "concept_name": "logistics",
+    "group_name": "miscellaneous",
+    "keyword": "transportation management companies",
+    "keyword_volume": 87.6666666667,
+    "max_bid": 10.69,
+    "min_bid": 1.978742
+  },
+  {
+    "competition": 0.331010452962,
+    "concept_name": "system",
+    "group_name": "miscellaneous",
+    "keyword": "shipment management system",
+    "keyword_volume": 39.0833333333,
+    "max_bid": 7.33,
+    "min_bid": 1.740281
+  },
+  {
+    "competition": 0.331010452962,
+    "concept_name": "shipping",
+    "group_name": "miscellaneous",
+    "keyword": "shipment management system",
+    "keyword_volume": 39.0833333333,
+    "max_bid": 7.33,
+    "min_bid": 1.740281
+  },
+  {
+    "competition": 0.524436090226,
+    "concept_name": "system",
+    "group_name": "miscellaneous",
+    "keyword": "best transportation management systems",
+    "keyword_volume": 48.75,
+    "max_bid": 27.3,
+    "min_bid": 6.064682
+  },
+  {
+    "competition": 0.524436090226,
+    "concept_name": "companies",
+    "group_name": "miscellaneous",
+    "keyword": "best transportation management systems",
+    "keyword_volume": 48.75,
+    "max_bid": 27.3,
+    "min_bid": 6.064682
+  },
+  {
+    "competition": 0.714285714286,
+    "concept_name": "system",
+    "group_name": "miscellaneous",
+    "keyword": "cloud based transport management system",
+    "keyword_volume": 35.5,
+    "max_bid": 19.32,
+    "min_bid": 0.9
+  },
+  {
+    "competition": 0.714285714286,
+    "concept_name": "cloud",
+    "group_name": "miscellaneous",
+    "keyword": "cloud based transport management system",
+    "keyword_volume": 35.5,
+    "max_bid": 19.32,
+    "min_bid": 0.9
+  },
+  {
+    "competition": 0.432653061224,
+    "concept_name": "blue jay",
+    "group_name": "miscellaneous brands",
+    "keyword": "blue jay transportation management",
+    "keyword_volume": 34.9166666667,
+    "max_bid": 8.14,
+    "min_bid": 5
+  },
+  {
+    "competition": 0.311688311688,
+    "concept_name": "system",
+    "group_name": "miscellaneous",
+    "keyword": "tms supply chain management",
+    "keyword_volume": 34.3333333333,
+    "max_bid": 7.739251,
+    "min_bid": 4.4
+  },
+  {
+    "competition": 0.311688311688,
+    "concept_name": "supply chain",
+    "group_name": "miscellaneous",
+    "keyword": "tms supply chain management",
+    "keyword_volume": 34.3333333333,
+    "max_bid": 7.739251,
+    "min_bid": 4.4
+  },
+  {
+    "competition": 0.148351648352,
+    "concept_name": "logistics",
+    "group_name": "miscellaneous",
+    "keyword": "freight transport management",
+    "keyword_volume": 33.0833333333,
+    "max_bid": 6.62,
+    "min_bid": 1.54
+  },
+  {
+    "competition": 0.148351648352,
+    "concept_name": "freight",
+    "group_name": "miscellaneous",
+    "keyword": "freight transport management",
+    "keyword_volume": 33.0833333333,
+    "max_bid": 6.62,
+    "min_bid": 1.54
+  },
+  {
+    "competition": 0.480158730159,
+    "concept_name": "gartner",
+    "group_name": "miscellaneous brands",
+    "keyword": "gartner transportation management systems",
+    "keyword_volume": 26.4166666667,
+    "max_bid": 17.04,
+    "min_bid": 4.03
+  },
+  {
+    "competition": 0.480158730159,
+    "concept_name": "system",
+    "group_name": "miscellaneous",
+    "keyword": "gartner transportation management systems",
+    "keyword_volume": 26.4166666667,
+    "max_bid": 17.04,
+    "min_bid": 4.03
+  },
+  {
+    "competition": 0.480158730159,
+    "concept_name": "companies",
+    "group_name": "miscellaneous",
+    "keyword": "gartner transportation management systems",
+    "keyword_volume": 26.4166666667,
+    "max_bid": 17.04,
+    "min_bid": 4.03
+  },
+  {
+    "competition": 0.0816326530612,
+    "concept_name": "freight",
+    "group_name": "miscellaneous",
+    "keyword": "premium freight management",
+    "keyword_volume": 24.75,
+    "max_bid": 8,
+    "min_bid": 1.84
+  },
+  {
+    "competition": 0.583673469388,
+    "concept_name": "system",
+    "group_name": "miscellaneous",
+    "keyword": "3pl tms",
+    "keyword_volume": 23.4166666667,
+    "max_bid": 11.27789,
+    "min_bid": 6.15
+  },
+  {
+    "competition": 0.583673469388,
+    "concept_name": "companies",
+    "group_name": "miscellaneous",
+    "keyword": "3pl tms",
+    "keyword_volume": 23.4166666667,
+    "max_bid": 11.27789,
+    "min_bid": 6.15
+  },
+  {
+    "competition": 0.583673469388,
+    "concept_name": "logistics",
+    "group_name": "miscellaneous",
+    "keyword": "3pl tms",
+    "keyword_volume": 23.4166666667,
+    "max_bid": 11.27789,
+    "min_bid": 6.15
+  },
+  {
+    "competition": 0.335164835165,
+    "concept_name": "oracle",
+    "group_name": "miscellaneous brands",
+    "keyword": "otm transportation management system",
+    "keyword_volume": 20.1666666667,
+    "max_bid": 15.887727,
+    "min_bid": 0.562999
+  },
+  {
+    "competition": 0.335164835165,
+    "concept_name": "system",
+    "group_name": "miscellaneous",
+    "keyword": "otm transportation management system",
+    "keyword_volume": 20.1666666667,
+    "max_bid": 15.887727,
+    "min_bid": 0.562999
+  },
+  {
+    "competition": 0.32967032967,
+    "concept_name": "system",
+    "group_name": "miscellaneous",
+    "keyword": "warehouse and transport management",
+    "keyword_volume": 18.9166666667,
+    "max_bid": 5.841384,
+    "min_bid": 0.723615
+  },
+  {
+    "competition": 0.32967032967,
+    "concept_name": "logistics",
+    "group_name": "miscellaneous",
+    "keyword": "warehouse and transport management",
+    "keyword_volume": 18.9166666667,
+    "max_bid": 5.841384,
+    "min_bid": 0.723615
+  },
+  {
+    "competition": 0.32967032967,
+    "concept_name": "supply chain",
+    "group_name": "miscellaneous",
+    "keyword": "warehouse and transport management",
+    "keyword_volume": 18.9166666667,
+    "max_bid": 5.841384,
+    "min_bid": 0.723615
+  },
+  {
+    "competition": 0.285714285714,
+    "concept_name": "system",
+    "group_name": "miscellaneous",
+    "keyword": "tms transportation management services ltd",
+    "keyword_volume": 18.5833333333,
+    "max_bid": 7.72,
+    "min_bid": 4.2
+  },
+  {
+    "competition": 0.285714285714,
+    "concept_name": "companies",
+    "group_name": "miscellaneous",
+    "keyword": "tms transportation management services ltd",
+    "keyword_volume": 18.5833333333,
+    "max_bid": 7.72,
+    "min_bid": 4.2
+  },
+  {
+    "competition": 0.285714285714,
+    "concept_name": "logistics",
+    "group_name": "miscellaneous",
+    "keyword": "tms transportation management services ltd",
+    "keyword_volume": 18.5833333333,
+    "max_bid": 7.72,
+    "min_bid": 4.2
+  },
+  {
+    "competition": 0.108843537415,
+    "concept_name": "logistics",
+    "group_name": "miscellaneous",
+    "keyword": "inbound freight management",
+    "keyword_volume": 17.0833333333,
+    "max_bid": 0,
+    "min_bid": 0
+  },
+  {
+    "competition": 0.108843537415,
+    "concept_name": "freight",
+    "group_name": "miscellaneous",
+    "keyword": "inbound freight management",
+    "keyword_volume": 17.0833333333,
+    "max_bid": 0,
+    "min_bid": 0
+  },
+  {
+    "competition": 0.114285714286,
+    "concept_name": "infor",
+    "group_name": "miscellaneous brands",
+    "keyword": "infor transportation management",
+    "keyword_volume": 15.75,
+    "max_bid": 0,
+    "min_bid": 0
+  },
+  {
+    "competition": 0.114285714286,
+    "concept_name": "system",
+    "group_name": "miscellaneous",
+    "keyword": "infor transportation management",
+    "keyword_volume": 15.75,
+    "max_bid": 0,
+    "min_bid": 0
+  },
+  {
+    "competition": 0.114285714286,
+    "concept_name": "companies",
+    "group_name": "miscellaneous",
+    "keyword": "infor transportation management",
+    "keyword_volume": 15.75,
+    "max_bid": 0,
+    "min_bid": 0
+  },
+  {
+    "competition": 0.114285714286,
+    "concept_name": "supply chain",
+    "group_name": "miscellaneous",
+    "keyword": "infor transportation management",
+    "keyword_volume": 15.75,
+    "max_bid": 0,
+    "min_bid": 0
+  },
+  {
+    "competition": 0.0892857142857,
+    "concept_name": "northline",
+    "group_name": "miscellaneous brands",
+    "keyword": "northline freight management",
+    "keyword_volume": 15.5,
+    "max_bid": 0,
+    "min_bid": 0
+  },
+  {
+    "competition": 0.0892857142857,
+    "concept_name": "companies",
+    "group_name": "miscellaneous",
+    "keyword": "northline freight management",
+    "keyword_volume": 15.5,
+    "max_bid": 0,
+    "min_bid": 0
+  },
+  {
+    "competition": 0.0892857142857,
+    "concept_name": "freight",
+    "group_name": "miscellaneous",
+    "keyword": "northline freight management",
+    "keyword_volume": 15.5,
+    "max_bid": 0,
+    "min_bid": 0
+  },
+  {
+    "competition": 0.15873015873,
+    "concept_name": "system",
+    "group_name": "miscellaneous",
+    "keyword": "tms freight management",
+    "keyword_volume": 15.4166666667,
+    "max_bid": 0,
+    "min_bid": 0
+  },
+  {
+    "competition": 0.15873015873,
+    "concept_name": "freight",
+    "group_name": "miscellaneous",
+    "keyword": "tms freight management",
+    "keyword_volume": 15.4166666667,
+    "max_bid": 0,
+    "min_bid": 0
+  },
+  {
+    "competition": 0.642857142857,
+    "concept_name": "system",
+    "group_name": "miscellaneous",
+    "keyword": "wms and tms systems",
+    "keyword_volume": 15.6666666667,
+    "max_bid": 24,
+    "min_bid": 7.616204
+  },
+  {
+    "competition": 0.414285714286,
+    "concept_name": "ortec",
+    "group_name": "miscellaneous brands",
+    "keyword": "ortec transport management system",
+    "keyword_volume": 15,
+    "max_bid": 15.885624,
+    "min_bid": 3.371165
+  },
+  {
+    "competition": 0.414285714286,
+    "concept_name": "system",
+    "group_name": "miscellaneous",
+    "keyword": "ortec transport management system",
+    "keyword_volume": 15,
+    "max_bid": 15.885624,
+    "min_bid": 3.371165
+  },
+  {
+    "competition": 0.414285714286,
+    "concept_name": "companies",
+    "group_name": "miscellaneous",
+    "keyword": "ortec transport management system",
+    "keyword_volume": 15,
+    "max_bid": 15.885624,
+    "min_bid": 3.371165
+  },
+  {
+    "competition": 0.857142857143,
+    "concept_name": "system",
+    "group_name": "miscellaneous",
+    "keyword": "tms fleet management system",
+    "keyword_volume": 14.9166666667,
+    "max_bid": 32.970002,
+    "min_bid": 4.91
+  },
+  {
+    "competition": 0.857142857143,
+    "concept_name": "companies",
+    "group_name": "miscellaneous",
+    "keyword": "tms fleet management system",
+    "keyword_volume": 14.9166666667,
+    "max_bid": 32.970002,
+    "min_bid": 4.91
+  },
+  {
+    "competition": 0.814285714286,
+    "concept_name": "companies",
+    "group_name": "miscellaneous",
+    "keyword": "freight management in logistics",
+    "keyword_volume": 13.4166666667,
+    "max_bid": 6.92,
+    "min_bid": 1.182228
+  },
+  {
+    "competition": 0.814285714286,
+    "concept_name": "logistics",
+    "group_name": "miscellaneous",
+    "keyword": "freight management in logistics",
+    "keyword_volume": 13.4166666667,
+    "max_bid": 6.92,
+    "min_bid": 1.182228
+  },
+  {
+    "competition": 0.814285714286,
+    "concept_name": "freight",
+    "group_name": "miscellaneous",
+    "keyword": "freight management in logistics",
+    "keyword_volume": 13.4166666667,
+    "max_bid": 6.92,
+    "min_bid": 1.182228
+  },
+  {
+    "competition": 0.1,
+    "concept_name": "logistics",
+    "group_name": "miscellaneous",
+    "keyword": "shipping and transportation management",
+    "keyword_volume": 15.4166666667,
+    "max_bid": 0,
+    "min_bid": 0
+  },
+  {
+    "competition": 0.1,
+    "concept_name": "freight",
+    "group_name": "miscellaneous",
+    "keyword": "shipping and transportation management",
+    "keyword_volume": 15.4166666667,
+    "max_bid": 0,
+    "min_bid": 0
+  },
+  {
+    "competition": 0.1,
+    "concept_name": "supply chain",
+    "group_name": "miscellaneous",
+    "keyword": "shipping and transportation management",
+    "keyword_volume": 15.4166666667,
+    "max_bid": 0,
+    "min_bid": 0
+  },
+  {
+    "competition": 0.1,
+    "concept_name": "shipping",
+    "group_name": "miscellaneous",
+    "keyword": "shipping and transportation management",
+    "keyword_volume": 15.4166666667,
+    "max_bid": 0,
+    "min_bid": 0
+  },
+  {
+    "competition": 0,
+    "concept_name": "oracle",
+    "group_name": "miscellaneous brands",
+    "keyword": "oracle transportation management certification",
+    "keyword_volume": 12.5833333333,
+    "max_bid": 0,
+    "min_bid": 0
+  },
+  {
+    "competition": 0,
+    "concept_name": "cloud",
+    "group_name": "miscellaneous",
+    "keyword": "oracle transportation management certification",
+    "keyword_volume": 12.5833333333,
+    "max_bid": 0,
+    "min_bid": 0
+  },
+  {
+    "competition": 0.107142857143,
+    "concept_name": "oracle",
+    "group_name": "miscellaneous brands",
+    "keyword": "oracle transportation management modules",
+    "keyword_volume": 12.4166666667,
+    "max_bid": 0,
+    "min_bid": 0
+  },
+  {
+    "competition": 0.107142857143,
+    "concept_name": "system",
+    "group_name": "miscellaneous",
+    "keyword": "oracle transportation management modules",
+    "keyword_volume": 12.4166666667,
+    "max_bid": 0,
+    "min_bid": 0
+  },
+  {
+    "competition": 0.242857142857,
+    "concept_name": "apl logistics",
+    "group_name": "miscellaneous brands",
+    "keyword": "apl logistics transportation management services ltd",
+    "keyword_volume": 12,
+    "max_bid": 11.048893,
+    "min_bid": 1.112246
+  },
+  {
+    "competition": 0.242857142857,
+    "concept_name": "companies",
+    "group_name": "miscellaneous",
+    "keyword": "apl logistics transportation management services ltd",
+    "keyword_volume": 12,
+    "max_bid": 11.048893,
+    "min_bid": 1.112246
+  },
+  {
+    "competition": 0.242857142857,
+    "concept_name": "logistics",
+    "group_name": "miscellaneous",
+    "keyword": "apl logistics transportation management services ltd",
+    "keyword_volume": 12,
+    "max_bid": 11.048893,
+    "min_bid": 1.112246
+  },
+  {
+    "competition": 0.122448979592,
+    "concept_name": "transportation insight",
+    "group_name": "miscellaneous brands",
+    "keyword": "transportation insight tms",
+    "keyword_volume": 10.75,
+    "max_bid": 0,
+    "min_bid": 0
+  },
+  {
+    "competition": 0.122448979592,
+    "concept_name": "system",
+    "group_name": "miscellaneous",
+    "keyword": "transportation insight tms",
+    "keyword_volume": 10.75,
+    "max_bid": 0,
+    "min_bid": 0
+  },
+  {
+    "competition": 0.122448979592,
+    "concept_name": "companies",
+    "group_name": "miscellaneous",
+    "keyword": "transportation insight tms",
+    "keyword_volume": 10.75,
+    "max_bid": 0,
+    "min_bid": 0
+  },
+  {
+    "competition": 0.122448979592,
+    "concept_name": "logistics",
+    "group_name": "miscellaneous",
+    "keyword": "transportation insight tms",
+    "keyword_volume": 10.75,
+    "max_bid": 0,
+    "min_bid": 0
+  },
+  {
+    "competition": 0.0892857142857,
+    "concept_name": "transportation insight",
+    "group_name": "miscellaneous brands",
+    "keyword": "transportation insight tms login",
+    "keyword_volume": 10.25,
+    "max_bid": 6.25,
+    "min_bid": 4.06
+  },
+  {
+    "competition": 0.0892857142857,
+    "concept_name": "system",
+    "group_name": "miscellaneous",
+    "keyword": "transportation insight tms login",
+    "keyword_volume": 10.25,
+    "max_bid": 6.25,
+    "min_bid": 4.06
+  },
+  {
+    "competition": 0.0892857142857,
+    "concept_name": "companies",
+    "group_name": "miscellaneous",
+    "keyword": "transportation insight tms login",
+    "keyword_volume": 10.25,
+    "max_bid": 6.25,
+    "min_bid": 4.06
+  },
+  {
+    "competition": 0.0892857142857,
+    "concept_name": "logistics",
+    "group_name": "miscellaneous",
+    "keyword": "transportation insight tms login",
+    "keyword_volume": 10.25,
+    "max_bid": 6.25,
+    "min_bid": 4.06
+  },
+  {
+    "competition": 0,
+    "concept_name": "logistics",
+    "group_name": "miscellaneous",
+    "keyword": "freight control trucking",
+    "keyword_volume": 2.16666666667,
+    "max_bid": 0,
+    "min_bid": 0
+  },
+  {
+    "competition": 0,
+    "concept_name": "freight",
+    "group_name": "miscellaneous",
+    "keyword": "freight control trucking",
+    "keyword_volume": 2.16666666667,
+    "max_bid": 0,
+    "min_bid": 0
+  },
+  {
+    "competition": 0,
+    "concept_name": "companies",
+    "group_name": "miscellaneous",
+    "keyword": "universal freight management india",
+    "keyword_volume": 1.25,
+    "max_bid": 0,
+    "min_bid": 0
+  },
+  {
+    "competition": 0,
+    "concept_name": "freight",
+    "group_name": "miscellaneous",
+    "keyword": "universal freight management india",
+    "keyword_volume": 1.25,
+    "max_bid": 0,
+    "min_bid": 0
+  }
+]
