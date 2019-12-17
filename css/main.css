@@ -1164,7 +1164,7 @@ ul.about {
 #profile_social a {
   width: 45px;
   height: 45px;
-  line-height: 45px;
+  line-height: 45px !;
   margin: 0px 0px 0px 5px;
   padding: 0;
   border-width: 1px;
@@ -1183,6 +1183,7 @@ ul.about {
 #profile_social a:hover {
   background-color: #fff;
 }
+#profile_social a i.fa {line-height: 45px;}
 .widget-profil .image-holder {
   position: relative;
   margin: 15px auto;
