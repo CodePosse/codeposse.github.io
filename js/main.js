@@ -308,7 +308,7 @@ jQuery(document).ready(function($) {
   /* ------------------------------ Google Maps --------------------------- */
   /* ---------------------------------------------------------------------- */
 
-  var map;
+/*   var map;
   function initialize() {
     map = new GMaps({
       div: "#map",
@@ -325,7 +325,7 @@ jQuery(document).ready(function($) {
         content: "<p>Melbourne Victoria, 300, Australia</p>"
       }
     });
-  }
+  } */
 
   /* ---------------------------------------------------------------------- */
   /* --------------------------------- Blog ------------------------------- */
@@ -505,7 +505,7 @@ a = {
   Name: "Tim Hunold",
   Location: "LA, and sometimes Vegas",
   Experience: "20+ years",
-  Phone: "310-591-6999",
+  Phone: "310-929-7155 (email me fist)",
   Site_Personal: "ItsSoBig.com",
   Site_Professional: "linkedin.com/in/itssobig",
   Email: title + "@gmail.com",
