@@ -510,7 +510,8 @@ a = {
   Site_Professional: "linkedin.com/in/itssobig",
   Email: title + "@gmail.com",
   Specialties:
-    "HTML, jQuery, JavaScript, Gulp, CSS/SASS/SCSS, CMS, NGx (Angular 2- x), WebPack"
+    "HTML, jQuery, JavaScript, Gulp, CSS/SASS/SCSS, CMS, NGx (Angular 2- x), WebPack",
+  Domain: document.hostname  
 };
 console.info(
   "%c Yeah, I got a GitHub and this is a stupid dev trick. If you saw this in console, congrats. If you saw this in view-source, bite me. " +
