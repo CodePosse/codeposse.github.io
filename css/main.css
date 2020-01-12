@@ -327,6 +327,12 @@ h2.resp-accordion:first-child {
   .resp-vtabs .resp-tab-content:last-child {
     border-bottom: 1px solid #c1c1c1 !important;
   }
+  .content_2 {
+    background: #f4f4f4;
+  }
+  #verticalTab {
+    height: auto;
+  }
   .scrollbar {
     height: 100% !important;
     overflow-y: hidden !important;
@@ -340,7 +346,7 @@ h2.resp-accordion:first-child {
   }
   .wrapper {
     position: relative !important;
-    margin: 15px auto !important;
+    top: 300px;
   }
 
   .flexy_content {
@@ -1183,7 +1189,9 @@ ul.about {
 #profile_social a:hover {
   background-color: #fff;
 }
-#profile_social a i.fa {line-height: 45px;}
+#profile_social a i.fa {
+  line-height: 45px;
+}
 .widget-profil .image-holder {
   position: relative;
   margin: 15px auto;

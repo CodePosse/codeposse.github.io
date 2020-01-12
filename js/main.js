@@ -157,8 +157,8 @@ jQuery(document).ready(function($) {
   function redimensionnement() {
     if (window.matchMedia("(max-width: 800px)").matches) {
       $(".content_2").mCustomScrollbar("destroy");
-      $(".resp-vtabs .resp-tabs-container").css("height", "100%");
-      $(".content_2").css("height", "100%");
+      $(".resp-vtabs .resp-tabs-container").css("height", "auto");
+      $(".content_2").css("height", "auto");
     } else {
       $(".resp-vtabs .resp-tabs-container").css("height", "580px");
       $(".content_2").css("height", "580px");
