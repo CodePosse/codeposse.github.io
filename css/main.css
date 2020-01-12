@@ -83,10 +83,9 @@ h6,
 .wrapper {
   display: block;
   width: 100%;
-  overflow: hidden;
+  overflow: auto;
   position: absolute;
-  top: 50%;
-  margin: -290.5px auto 0 auto;
+  margin: 50px auto;
 }
 h1 {
   font-size: 18px;
