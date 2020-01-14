@@ -7,9 +7,9 @@ jQuery(document).ready(function($) {
 
   /*Page Preloading*/
   $(window).load(function() {
-    $("#spinner").fadeOut(200);
+    $("#spinner").fadeOut(100);
     $("#preloader")
-      .delay(200)
+      .delay(100)
       .fadeOut("slow");
     $(".wrapper").fadeIn(200);
     $("#custumize-style").fadeIn(200);
