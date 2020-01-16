@@ -12,7 +12,7 @@ jQuery(document).ready(function($) {
       .delay(100)
       .fadeOut("slow");
     $(".wrapper").fadeIn(200);
-    $("#custumize-style").fadeIn(200);
+    $("#customize-style").fadeIn(200);
   });
 
   /* ---------------------------------------------------------------------- */
