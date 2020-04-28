@@ -28685,7 +28685,7 @@ function genericPrint$5(path, options, print) {
       }
 
     case "image":
-      return concat$16(["![", node.alt || "", "](", printUrl(node.url, ")"), printTitle(node.title, options), ")"]);
+      return concat$16(["![", node.alt="" role="presentation image"|| "", "](", printUrl(node.url, ")"), printTitle(node.title, options), ")"]);
 
     case "blockquote":
       return concat$16(["> ", align$2("> ", printChildren$1(path, options, print))]);
@@ -28760,7 +28760,7 @@ function genericPrint$5(path, options, print) {
     case "imageReference":
       switch (node.referenceType) {
         case "full":
-          return concat$16(["![", node.alt || "", "][", node.identifier, "]"]);
+          return concat$16(["![", node.alt="" role="presentation image"|| "", "][", node.identifier, "]"]);
 
         default:
           return concat$16(["![", node.alt, "]", node.referenceType === "collapsed" ? "[]" : ""]);

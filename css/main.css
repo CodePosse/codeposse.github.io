@@ -26,7 +26,7 @@
   top: 50%;
   left: 50%;
   margin: -40px 0 0 -40px;
-  background: url(../images/spinner.GIF) no-repeat;
+  background: url(../images/spinner.GIF) no-repeat white;
 }
 #portfolio .mCSB_container {
   margin-right: 0 !important;
@@ -61,7 +61,7 @@ body {
   line-height: 25px;
   color: #333333;
   overflow-x: hidden;
-  background-image: url(../images/bg/bg5.png);
+  background: url(../images/bg/bg5.png) #333;
   padding: 0;
 }
 h1,
@@ -386,7 +386,7 @@ p {
   line-height: 22px;
   text-align: left;
   margin: 0;
-  color: #999 !important;
+  color: #666 !important;
   font-family: "Lato", sans-serif;
 }
 .active-hi-icon {
@@ -955,7 +955,7 @@ h2.resp-accordion:hover {
 }
 .bottom-p .panel-body {
   padding: 15px;
-  color: #999 !important;
+  color: #666 !important;
   font-size: 14px;
   font-family: "Lato", sans-serif;
 }
@@ -975,7 +975,7 @@ ul.about li span.value {
 }
 ul.about li {
   margin: 0;
-  color: #717171;
+  color: #666;
   display: block;
   font-size: 13px;
   border-bottom: 1px solid #e6e6e6;
@@ -1704,8 +1704,8 @@ a.readmore:active {
 a.readmore.disabled {
   cursor: default;
   background-color: #fff !important;
-  color: #999 !important;
-  border: 1px solid #999 !important;
+  color: #666 !important;
+  border: 1px solid #666 !important;
 }
 a.readmore:visited,
 a.readmore {

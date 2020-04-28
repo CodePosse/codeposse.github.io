@@ -22,7 +22,7 @@ gulp.task("miniHTML", async function() {
     .pipe(plumber())
     .pipe(
       cheerio(function($, file) {
-        $("img:not([alt])").attr("alt", ""); //this adds a blank alt tag to images without an alt
+        $("img:not([alt])").attr("alt", ""); //this adds a blank alt="" role="presentation image"tag to images without an alt
       })
     )
     .pipe(
