@@ -76,13 +76,13 @@
                     $respTabs.find('.resp-tab-content').first().addClass('resp-tab-content-active').attr('style', 'display:block');
 
                     //Assigning the 'aria-labelledby' attr to tab-content
-                    var tabcount = 0;
+                 /*   var tabcount = 0;
                     $respTabs.find('.resp-tab-content').each(function() {
                         $tabContent = $(this);
-                        //$tabContent.attr('aria-labelledby', 'tab_item-' + (tabcount));
+                        $tabContent.attr('aria-labelledby', 'tab_item-' + (tabcount));
                         tabcount++;
                     });
-                    count++;
+                    count++;*/
                 });
 
                 //Tab Click action function
@@ -104,12 +104,12 @@
                             $respTabs.find('.resp-tab-content-active').slideUp().removeClass('resp-tab-content-active resp-accordion-closed');
                             $respTabs.find("[aria-controls=" + $tabAria + "]").addClass('resp-tab-active');
 
-                            //$respTabs.find('.resp-tab-content[aria-labelledby = ' + $tabAria + ']').slideDown().addClass('resp-tab-content-active');
+                            $respTabs.find('.resp-tab-content[aria-labelledby = ' + $tabAria + ']').slideDown().addClass('resp-tab-content-active');
                         } else {
                             $respTabs.find('.resp-tab-active').removeClass('resp-tab-active');
                             $respTabs.find('.resp-tab-content-active').removeAttr('style').removeClass('resp-tab-content-active').removeClass('resp-accordion-closed');
                             $respTabs.find("[aria-controls=" + $tabAria + "]").addClass('resp-tab-active');
-                            //$respTabs.find('.resp-tab-content[aria-labelledby = ' + $tabAria + ']').addClass('resp-tab-content-active').attr('style', 'display:block');
+                            $respTabs.find('.resp-tab-content[aria-labelledby = ' + $tabAria + ']').addClass('resp-tab-content-active').attr('style', 'display:block');
                         }
                     });
 

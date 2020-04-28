@@ -496,7 +496,7 @@ h2.resp-accordion:hover {
 #contactform p label,
 #comment_form p label {
   display: block;
-  color: #999;
+  color: #666;
   margin-bottom: 8px;
   font-size: 13px;
 }
