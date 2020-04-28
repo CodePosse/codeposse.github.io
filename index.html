@@ -98,6 +98,7 @@
   </head>
 
   <body>
+    <main>
     <script type="application/ld+json">
       {
         "@context": "http://schema.org",
@@ -156,8 +157,8 @@
                       <!-- Profile info -->
                       <div id="profile_info">
                         <h1 id="name" class="transition-02">Tim Hunold</h1>
-                        <h4 class="line">UX/UI/Front-End</h4>
-                        <h6>
+                        <h2 class="line">UX/UI/Front-End</h2>
+                        <h3>
                           <span class="fa fa-map-marker"></span>
                           <a
                             href="https://www.beverlyhills.org/"
@@ -165,7 +166,7 @@
                             title="my home town"
                             >Beverly Hills, CA</a
                           >
-                        </h6>
+                        </h3>
                       </div>
                       <!-- End Profile info -->
 
@@ -184,7 +185,7 @@
 
                       <!-- Name -->
                       <div id="profile_social">
-                        <h6>My Social Profiles</h6>
+                        <h3>My Social Profiles</h3>
                         <a
                           href="https://www.facebook.com/tim.hunold"
                           target="_blank"
@@ -229,28 +230,28 @@
                         class="tabs-profile hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a profile"
                         data-tab-name="profile"
                       >
-                        <span class="tite-list">profile</span>
+                        <span class="tite-list" id="tab_item-0">profile</span>
                         <i class="fa fa-user icon_menu icon_menu_active"></i>
                       </li>
                       <li
                         class="tabs-resume hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a"
                         data-tab-name="resume"
                       >
-                        <span class="tite-list">resume</span>
+                        <span class="tite-list" id="tab_item-1">resume</span>
                         <i class="fa fa-tasks icon_menu"></i>
                       </li>
                       <li
                         class="tabs-portfolio hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a"
                         data-tab-name="portfolio"
                       >
-                        <span class="tite-list">portfolio</span>
+                        <span class="tite-list" id="tab_item-2">portfolio</span>
                         <i class="fa fa-briefcase icon_menu"></i>
                       </li>
                       <li
                         class="tabs-blog hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a"
                         data-tab-name="blog"
                       >
-                        <span class="tite-list">blog</span>
+                        <span class="tite-list" id="tab_item-3">blog</span>
                         <i class="fa fa-bullhorn icon_menu"></i>
                       </li>
                       <li
@@ -258,7 +259,7 @@
                         data-tab-name="contact"
                         style="margin-bottom: 48px !important;"
                       >
-                        <span class="tite-list">contact</span>
+                        <span class="tite-list" id="tab_item-4">contact</span>
                         <i class="fa fa-envelope icon_menu"></i>
                       </li>
 
@@ -290,19 +291,19 @@
                             <ul class="about">
                               <li>
                                 <i class="glyphicon glyphicon-user"></i>
-                                <label>Name</label>
+                                <span class="label">Name</span>
                                 <span class="value">Tim Hunold</span>
                                 <div class="clear"></div>
                               </li>
                               <li>
                                 <i class="glyphicon glyphicon-calendar"></i>
-                                <label>Date of birth</label>
+                                <span class="label">DOB</span>
                                 <span class="value">September 13, 1973</span>
                                 <div class="clear"></div>
                               </li>
                               <li>
                                 <i class="glyphicon glyphicon-map-marker"></i>
-                                <label>Adress</label>
+                                <span class="label">Address</span>
                                 <span class="value">
                                   <a
                                     href="https://www.google.com/maps/place/The+Beverly+Hills+Hotel/@34.0817957,-118.4155833,17z/data=!3m1!4b1!4m5!3m4!1s0x80c2bc075ee46a8d:0xa06600ecd59fad41!8m2!3d34.0817957!4d-118.4133946"
@@ -314,7 +315,7 @@
                               </li>
                               <li>
                                 <i class="glyphicon glyphicon-envelope"></i>
-                                <label>Email</label>
+                                <span class="label">Email</span>
                                 <span class="value">
                                   <a
                                     href="mailto:codeposse+github@gmail.com?subject=Githubpage&body=Sent from Github Pages"
@@ -325,7 +326,7 @@
                               </li>
                               <li>
                                 <i class="glyphicon glyphicon-phone"></i>
-                                <label>Phone</label>
+                                <span class="label">Phone</span>
                                 <span class="value"
                                   >+1 (310) 929-7155
                                   <small>emails before calls</small></span
@@ -334,7 +335,7 @@
                               </li>
                               <li>
                                 <i class="glyphicon glyphicon-globe"></i>
-                                <label>Website</label>
+                                <span class="label">Website</span>
                                 <span class="value">
                                   <a
                                     href="http://www.ItsSoBig.com/"
@@ -412,7 +413,7 @@
                                   <i class="fa fa-tag"></i>
                                 </div>
                                 <div class="service-detail">
-                                  <h6>Tagging</h6>
+                                  <div class="serv-title">Tagging</div>
                                   <p>
                                     Knowing what you have helps you plan your
                                     way forward with proper taxonomy.
@@ -426,7 +427,7 @@
                                   <i class="fa fa-cogs"></i>
                                 </div>
                                 <div class="service-detail">
-                                  <h6>Tooling</h6>
+                                  <div class="serv-title">Tooling</div>                                
                                   <p>
                                     Outcome is more important than the tool, but
                                     why make it hard?
@@ -440,7 +441,7 @@
                                   <i class="fa fa-arrows-alt"></i>
                                 </div>
                                 <div class="service-detail">
-                                  <h6>To the four corners</h6>
+                                  <div class="serv-title">To the four corners</div>
                                   <p>
                                     When's the last time your project worked
                                     cleanly across all viewports?
@@ -466,7 +467,7 @@
                               <div class="panel-group" id="accordion">
                                 <div class="panel panel-default">
                                   <div class="panel-heading">
-                                    <h4 class="panel-title">
+                                    <h1 class="panel-title">
                                       <a
                                         data-toggle="collapse"
                                         data-parent="#accordion"
@@ -479,7 +480,7 @@
                                           style="float: right; font-size: 13px;"
                                         ></i>
                                       </a>
-                                    </h4>
+                                    </h1>
                                   </div>
                                   <div
                                     id="collapseOne"
@@ -495,7 +496,7 @@
                                 </div>
                                 <div class="panel panel-default">
                                   <div class="panel-heading">
-                                    <h4 class="panel-title">
+                                    <h1 class="panel-title">
                                       <a
                                         data-toggle="collapse"
                                         data-parent="#accordion"
@@ -508,7 +509,7 @@
                                           style="float: right; font-size: 13px;"
                                         ></i>
                                       </a>
-                                    </h4>
+                                    </h1>
                                   </div>
                                   <div
                                     id="collapseTwo"
@@ -525,7 +526,7 @@
                                 </div>
                                 <div class="panel panel-default">
                                   <div class="panel-heading">
-                                    <h4 class="panel-title">
+                                    <h1 class="panel-title">
                                       <a
                                         data-toggle="collapse"
                                         data-parent="#accordion"
@@ -538,7 +539,7 @@
                                           style="float: right; font-size: 13px;"
                                         ></i>
                                       </a>
-                                    </h4>
+                                    </h1>
                                   </div>
                                   <div
                                     id="collapseThree"
@@ -547,11 +548,11 @@
                                     <div class="panel-body">
                                       <i class="fa fa-quote-left"></i>
                                       Technology is a tool, not a reason. I
-                                      choose my stacks based on what gets the
-                                      job done cleanly and maintainable.
+                                      choose stacks based on what gets it
+                                      done cleanly and maintainable.
                                       Complexity pretending to be powerful is
                                       the enemy of all things holy, maintainable
-                                      and affordable
+                                      and affordable.
                                     </div>
                                   </div>
                                 </div>
@@ -1772,12 +1773,12 @@
 
                                   <form action="" id="contactform">
                                     <p class="form-group" id="contact-name">
-                                      <label for="name">Your Name</label>
+                                      <label for="yourname">Your Name</label>
                                       <input
                                         type="text"
                                         name="name"
                                         class="form-control name-contact"
-                                        id="name"
+                                        id="yourname"
                                         placeholder="Name..."
                                         disabled
                                       />
@@ -1854,6 +1855,7 @@
       </section>
       <!-- End Content -->
     </div>
+    </main>
     <!-- End wrapper -->
 
     <!-- jquery | jQuery 1.11.0 -->

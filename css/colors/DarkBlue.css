@@ -95,8 +95,10 @@ a.readmore:hover, a.readmore:focus, a.readmore:active {
 #contactform .submit, #comment_form .submit {
     background-color: #3B5998;
 }
-#profile .about i.glyphicon, #profile .about label {
+#profile .about i.glyphicon, #profile .about label, #profile .about .label {
     color: #3B5998;
+    padding: .2rem .6rem .3rem;
+    font-size:13px;
 }
 #section-title, #categories_sidebar ul.categories li a:hover {
     background: #3B5998;
@@ -197,11 +199,13 @@ h2.resp-accordion:hover .hi-icon, .no-touch .hi-icon-effect-5 .hi-icon:hover {
 .widget-profil  h1 {
     color:#C1D3ED;
 }
-.widget-profil  h4 {
+.widget-profil  h2 {
     color:#C1D3ED; 
 }
-.widget-profil  h6 {
+.widget-profil  h3 {
     color:#C1D3ED; 
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .widget-profil  p {
     color:#C1D3ED !important;

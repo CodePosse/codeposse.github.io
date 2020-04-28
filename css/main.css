@@ -35,7 +35,8 @@
 #customize-style {
   display: none;
 }
-label {
+label,
+.label {
   font-weight: 400 !important;
 }
 .text-left {
@@ -954,7 +955,7 @@ h2.resp-accordion:hover {
   width: 100%;
 }
 .bottom-p .panel-body {
-  padding: 15px;
+  padding: 10px 15px;
   color: #666 !important;
   font-size: 14px;
   font-family: "Lato", sans-serif;
@@ -974,7 +975,7 @@ ul.about li span.value {
   float: right;
 }
 ul.about li {
-  margin: 0;
+  margin: 0 0 5px;
   color: #666;
   display: block;
   font-size: 13px;
@@ -1137,12 +1138,12 @@ ul.about {
   font-weight: 400;
 }
 
-.widget-profil h4 {
+.widget-profil h2 {
   text-align: center;
   font-size: 15px;
   margin-top: 0px;
 }
-.widget-profil h6 {
+.widget-profil h3 {
   text-align: center;
   font-size: 14px;
   font-weight: 400;
@@ -2549,6 +2550,7 @@ ul.info-post li {
   .panel-title {
     font-size: 13px;
   }
+
   .text_content {
     font-size: 13px;
   }
@@ -2913,7 +2915,7 @@ li h6 {
   -moz-transform: scale(1) rotate(360deg);
   -o-transform: scale(1) rotate(360deg);
 }
-#services .service-detail h6 {
+#services .service-detail .serv-title {
   text-transform: uppercase;
   font-weight: 400;
   margin: 10px 0 3px 0;
@@ -3062,4 +3064,13 @@ div.ppt {
 ::selection {
   background: #505050;
   color: #fff;
+}
+h1.panel-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  color: inherit;
+  border: none;
+  color: #fff !important;
+  padding: 0;
 }
