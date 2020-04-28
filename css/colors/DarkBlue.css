@@ -37,11 +37,17 @@ a {
 #profile .col-md-5 h2, #profile .col-md-5 h4, #resume .col-md-6 p, #resume .col-md-6 span.duration {
     color: #3B5998;
 }
-#resume .resume-left ul li h5 {
+#resume .resume-left ul li .h5 {
     border-bottom: 1px solid #3B5998;
+    padding: 5px 0 10px;
+    font-weight: 400 !important;
+    margin:0;
+    padding: 10px 0;
 }
-.attributes span.glyphicon, .attributes h6 {
+.attributes span.glyphicon, .attributes .h6 {
     color: #3B5998;
+    font-weight: 400 !important;
+    margin:10px 0;
 }
 .blog-article a.read_m:hover {
     border: 1px solid #3B5998;
