@@ -1162,11 +1162,11 @@ ul.about {
   padding-bottom: 15px;
 }
 
-.widget-profil #profile_social {
+.widget-profil *[id^="profile_social"] {
   padding-top: 15px;
 }
 
-#profile_social a {
+*[id^="profile_social"] a {
   width: 45px;
   height: 45px;
   line-height: 45px !;
@@ -1185,10 +1185,10 @@ ul.about {
   transition: all 0.3s ease-in;
 }
 
-#profile_social a:hover {
+*[id^="profile_social"] a:hover {
   background-color: #fff;
 }
-#profile_social a i.fa {
+*[id^="profile_social"] a i.fa {
   line-height: 45px;
 }
 .widget-profil .image-holder {
@@ -1214,7 +1214,7 @@ ul.about {
 }
 
 @media only screen and (min-width: 1200px) {
-  .widget-profil #profile_social a {
+  .widget-profil *[id^="profile_social"] a {
     width: 45px;
     height: 45px;
     line-height: 45px;
@@ -1227,7 +1227,7 @@ ul.about {
 }
 
 @media only screen and (max-width: 1199px) {
-  .widget-profil #profile_social a {
+  .widget-profil *[id^="profile_social"] a {
     width: 34px;
     height: 34px;
     line-height: 34px;
@@ -1255,7 +1255,7 @@ ul.about {
     margin-bottom: 20px;
     float: none;
   }
-  #profile_social {
+  *[id^="profile_social"] {
     display: none;
   }
   #profile_desc {
@@ -1269,7 +1269,7 @@ ul.about {
     margin-bottom: 20px;
     float: none;
   }
-  #profile_social {
+  *[id^="profile_social"] {
     display: none;
   }
   #profile_desc {
@@ -1292,7 +1292,7 @@ ul.about {
     margin-bottom: 20px;
     float: none;
   }
-  #profile_social {
+  *[id^="profile_social"] {
     display: none;
   }
 }
@@ -1311,7 +1311,7 @@ ul.about {
     float: none;
   }
 
-  #profile_social {
+  *[id^="profile_social"] {
     display: none;
   }
   #profile_desc {
@@ -3057,7 +3057,7 @@ div.ppt {
   }
 }
 
-#contact #profile_social {
+#contact *[id^="profile_social"] {
   display: block !important;
 }
 
