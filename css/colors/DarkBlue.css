@@ -32,7 +32,7 @@ a {
     color: #3B5998;
 }
 #contactform .submit:hover, #comment_form .submit:hover {
-    webkit-filter: brightness(98%) !important;
+    filter: brightness(98%) !important;
 }
 #profile .col-md-5 h2, #profile .col-md-5 h4, #resume .col-md-6 p, #resume .col-md-6 span.duration {
     color: #3B5998;
