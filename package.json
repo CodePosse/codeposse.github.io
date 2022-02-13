@@ -41,7 +41,6 @@
     "lodash": "^4.17.21",
     "prettify": "^0.1.0",
     "uglify": "^0.1.5",
-    "uglify-js": "^3.15.0",
     "underscore.string": "^3.3.6"
   }
 }
