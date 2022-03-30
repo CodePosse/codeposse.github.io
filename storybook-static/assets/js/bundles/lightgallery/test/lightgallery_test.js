@@ -1,0 +1,1 @@
+!function($){module("lightGallery"),test("$item should take corrent value",(function(){ok($.fn.lightGallery,"options set up correctly")}))}(jQuery);
