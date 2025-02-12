@@ -1169,7 +1169,7 @@ ul.about {
 *[id^="profile_social"] a {
   width: 45px;
   height: 45px;
-  line-height: 45px !;
+  line-height: 45px;
   margin: 0px 0px 0px 5px;
   padding: 0;
   border-width: 1px;
