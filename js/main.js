@@ -320,7 +320,7 @@ a = {
     Name: "Tim Hunold",
     Location: "LA, and sometimes Vegas",
     Experience: "20+ years",
-    Phone: "310-929-7155 (email me fist)",
+    Phone: "310-591-6999 (email me fist)",
     Site_Personal: "ItsSoBig.com",
     Site_Professional: "linkedin.com/in/itssobig",
     Email: title + "@gmail.com",
