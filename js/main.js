@@ -1,521 +1,336 @@
-jQuery(document).ready(function($) {
-  "use strict";
+/*
+* Template Name: BreezyCV - Resume / CV / vCard / Portfolio Template
+* Author: LMPixels
+* Author URL: http://themeforest.net/user/lmpixels
+* Version: 1.6.0
+*/
 
-  /* ---------------------------------------------------------------------- */
-  /*	------------------------------- Loading ----------------------------- */
-  /* ---------------------------------------------------------------------- */
+(function ($) {
+    "use strict";
+    // Portfolio subpage filters
+    function portfolio_init() {
+        var portfolio_grid = $('.portfolio-grid'),
+            portfolio_filter = $('.portfolio-filters');
 
-  /*Page Preloading*/
-  $(window).load(function() {
-    $("#spinner").fadeOut(100);
-    $("#preloader")
-      .delay(100)
-      .fadeOut("slow");
-    $(".wrapper").fadeIn(200);
-    $("#customize-style").fadeIn(200);
-  });
+        if (portfolio_grid) {
 
-  /* ---------------------------------------------------------------------- */
-  /* ------------------------------- Taps profile ------------------------- */
-  /* ---------------------------------------------------------------------- */
+            portfolio_grid.shuffle({
+                speed: 450,
+                itemSelector: 'figure'
+            });
 
-  $(".collapse_tabs").click(function() {
-    if ($(this).hasClass("collapsed")) {
-      $(this)
-        .find("i.glyphicon")
-        .removeClass("glyphicon-chevron-down")
-        .addClass("glyphicon-chevron-up");
-    } else {
-      $(this)
-        .find("i.glyphicon")
-        .removeClass("glyphicon-chevron-up")
-        .addClass("glyphicon-chevron-down");
-    }
-  });
+            portfolio_filter.on("click", ".filter", function (e) {
+                portfolio_grid.shuffle('update');
+                e.preventDefault();
+                $('.portfolio-filters .filter').parent().removeClass('active');
+                $(this).parent().addClass('active');
+                portfolio_grid.shuffle('shuffle', $(this).attr('data-group'));
+            });
 
-  /* ---------------------------------------------------------------------- */
-  /* -------------------------- easyResponsiveTabs ------------------------ */
-  /* ---------------------------------------------------------------------- */
-
-  $("#verticalTab").easyResponsiveTabs({
-    type: "vertical",
-    width: "auto",
-    fit: true
-  });
-
-  $("h2.resp-accordion").click(function() {
-    $(this)
-      .find(".icon_menu")
-      .addClass("icon_menu_active");
-    $("h2.resp-accordion")
-      .not(this)
-      .find(".icon_menu")
-      .removeClass("icon_menu_active");
-
-    /*	Scroll To */
-    $("html, body").animate(
-      { scrollTop: $("h2.resp-accordion").offset().top - 50 },
-      600
-    );
-  });
-
-  $(".resp-tabs-list li").click(function() {
-    $(this)
-      .find(".icon_menu")
-      .addClass("icon_menu_active");
-    $(".resp-tabs-list li")
-      .not(this)
-      .find(".icon_menu")
-      .removeClass("icon_menu_active");
-  });
-
-  $(".resp-tabs-list li").hover(
-    function() {
-      $(this)
-        .find(".icon_menu")
-        .addClass("icon_menu_hover");
-    },
-    function() {
-      $(this)
-        .find(".icon_menu")
-        .removeClass("icon_menu_hover");
-    }
-  );
-
-  $("h2.resp-accordion").hover(
-    function() {
-      $(this)
-        .find(".icon_menu")
-        .addClass("icon_menu_hover");
-    },
-    function() {
-      $(this)
-        .find(".icon_menu")
-        .removeClass("icon_menu_hover");
-    }
-  );
-
-  /* ---------------------------------------------------------------------- */
-  /* --------------------------- Scroll tabs ------------------------------ */
-  /* ---------------------------------------------------------------------- */
-
-  $(".content_2").mCustomScrollbar({
-    theme: "dark-2",
-    contentTouchScroll: true,
-    advanced: {
-      updateOnContentResize: true,
-      updateOnBrowserResize: true,
-      autoScrollOnFocus: false
-    }
-  });
-
-  /* ---------------------------------------------------------------------- */
-  /* ------------------------- Effect tabs -------------------------------- */
-  /* ---------------------------------------------------------------------- */
-
-  var animation_style = "bounceIn";
-
-  $(".dropdown-select").change(function() {
-    animation_style = $(".dropdown-select").val();
-  });
-
-  $("ul.resp-tabs-list li[class^=tabs-]").click(function() {
-    var tab_name = $(this).attr("data-tab-name");
-
-    $(".resp-tabs-container").addClass("animated " + animation_style);
-    $(".resp-tabs-container").one(
-      "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
-      function() {
-        $(".resp-tabs-container").removeClass("animated " + animation_style);
-      }
-    );
-
-    $(".content_2").mCustomScrollbar("destroy");
-    $(".content_2").mCustomScrollbar({
-      theme: "dark-2",
-      contentTouchScroll: true,
-      advanced: {
-        updateOnContentResize: true,
-        updateOnBrowserResize: true,
-        autoScrollOnFocus: false
-      }
-    });
-
-    if (tab_name == "contact") initialize();
-
-    return false;
-  });
-
-  $("#verticalTab h2.resp-accordion").click(function() {
-    initialize();
-  });
-
-  /* ---------------------------------------------------------------------- */
-  /* ---------------------- redimensionnement ----------------------------- */
-  /* ---------------------------------------------------------------------- */
-
-  function redimensionnement() {
-    if (window.matchMedia("(max-width: 800px)").matches) {
-      $(".content_2").mCustomScrollbar("destroy");
-      $(".resp-vtabs .resp-tabs-container").css("height", "auto");
-      $(".content_2").css("height", "auto");
-    } else {
-      $(".resp-vtabs .resp-tabs-container").css("height", "580px");
-      $(".content_2").css("height", "580px");
-      $(".content_2").mCustomScrollbar("destroy");
-      $(".content_2").mCustomScrollbar({
-        theme: "dark-2",
-        contentTouchScroll: true,
-        advanced: {
-          updateOnContentResize: true,
-          updateOnBrowserResize: true,
-          autoScrollOnFocus: false
         }
-      });
     }
-  }
+    // /Portfolio subpage filters
 
-  // On lie l'événement resize à la fonction
-  window.addEventListener("load", redimensionnement, false);
-  window.addEventListener("resize", redimensionnement, false);
 
-  $("#verticalTab h2.resp-accordion").click(function() {
-    initialize();
-  });
+    // Hide Mobile menu
+    function mobileMenuHide() {
+        var windowWidth = $(window).width(),
+            siteHeader = $('#site_header');
 
-  /* ---------------------------------------------------------------------- */
-  /* -------------------------- Contact Form ------------------------------ */
-  /* ---------------------------------------------------------------------- */
-
-  // Needed variables
-  var $contactform = $("#contactform");
-  var $success = " Your message has been sent. Thank you!";
-  var response = "";
-
-  $("#contactform").submit(function() {
-    $.ajax({
-      type: "POST",
-      url: "php/contact.php",
-      data: $(this).serialize(),
-      success: function(msg) {
-        var msg_error = msg.split(",");
-        var output_error = "";
-
-        if (msg_error.indexOf("error-message") != -1) {
-          $("#contact-message").addClass("has-error");
-          $("#contact-message").removeClass("has-success");
-          output_error = "Please enter your message.";
+        if (windowWidth < 1025) {
+            siteHeader.addClass('mobile-menu-hide');
+            $('.menu-toggle').removeClass('open');
+            setTimeout(function () {
+                siteHeader.addClass('animate');
+            }, 500);
         } else {
-          $("#contact-message").addClass("has-success");
-          $("#contact-message").removeClass("has-error");
+            siteHeader.removeClass('animate');
         }
+    }
+    // /Hide Mobile menu
 
-        if (msg_error.indexOf("error-email") != -1) {
-          $("#contact-email").addClass("has-error");
-          $("#contact-email").removeClass("has-success");
-          output_error = "Please enter valid e-mail.";
+    // Custom scroll
+    function customScroll() {
+        var windowWidth = $(window).width();
+        if (windowWidth > 1024) {
+            $('.animated-section, .single-page-content').each(function () {
+                $(this).perfectScrollbar();
+            });
         } else {
-          $("#contact-email").addClass("has-success");
-          $("#contact-email").removeClass("has-error");
+            $('.animated-section, .single-page-content').each(function () {
+                $(this).perfectScrollbar('destroy');
+            });
         }
+    }
+    // /Custom scroll
 
-        if (msg_error.indexOf("error-name") != -1) {
-          $("#contact-name").addClass("has-error");
-          $("#contact-name").removeClass("has-success");
-          output_error = "Please enter your name.";
-        } else {
-          $("#contact-name").addClass("has-success");
-          $("#contact-name").removeClass("has-error");
-        }
+    // Contact form validator
+    $(function () {
 
-        if (msg == "success") {
-          response =
-            '<div class="alert alert-success success-send">' +
-            '<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' +
-            '<i class="glyphicon glyphicon-ok" style="margin-right: 5px;"></i> ' +
-            $success +
-            "</div>";
+        $('#contact_form').validator();
 
-          $(".reset").trigger("click");
-          $("#contact-name").removeClass("has-success");
-          $("#contact-email").removeClass("has-success");
-          $("#contact-message").removeClass("has-success");
-        } else {
-          response =
-            '<div class="alert alert-danger error-send">' +
-            '<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' +
-            '<i class="glyphicon glyphicon-remove" style="margin-right: 5px;"></i> ' +
-            output_error +
-            "</div>";
-        }
-        // Hide any previous response text
-        $(".error-send,.success-send").remove();
-        // Show response message
-        $contactform.prepend(response);
-      }
+        $('#contact_form').on('submit', function (e) {
+            if (!e.isDefaultPrevented()) {
+                var url = "contact_form/contact_form.php";
+
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data: $(this).serialize(),
+                    success: function (data) {
+                        var messageAlert = 'alert-' + data.type;
+                        var messageText = data.message;
+
+                        var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
+                        if (messageAlert && messageText) {
+                            $('#contact_form').find('.messages').html(alertBox);
+                            $('#contact_form')[0].reset();
+                        }
+                    }
+                });
+                return false;
+            }
+        });
     });
-    return false;
-  });
+    // /Contact form validator
 
-  /* ---------------------------------------------------------------------- */
-  /* ----------------------------- Portfolio ------------------------------ */
-  /* ---------------------------------------------------------------------- */
+    //On Window load & Resize
+    $(window)
+        .on('load', function () { //Load
+            // Animation on Page Loading
+            $(".preloader").fadeOut(800, "linear");
 
-  var filterList = {
-    init: function() {
-      // MixItUp plugin
-      // http://mixitup.io
-      $("#portfoliolist").mixitup({
-        targetSelector: ".portfolio",
-        filterSelector: ".filter",
-        effects: ["fade"],
-        easing: "snap",
-        // call the hover effect
-        onMixEnd: filterList.hoverEffect()
-      });
-    },
-    hoverEffect: function() {
-      // Simple parallax effect
-      /*$('#portfoliolist .portfolio').hover(
-		function() {
-		$(this).find('.label').stop().animate({bottom: 0}, 200);
-		$(this).find('img').stop().animate({top: -30}, 500);
-		},
-		function() {
-		$(this).find('.label').stop().animate({bottom: -40}, 200);
-		$(this).find('img').stop().animate({top: 0}, 300);
-		}
-		);*/
-    }
-  };
+            // initializing page transition.
+            var ptPage = $('.animated-sections');
+            if (ptPage[0]) {
+                PageTransitions.init({
+                    menu: 'ul.main-menu',
+                });
+            }
+        })
+        .on('resize', function () { //Resize
+            mobileMenuHide();
+            $('.animated-section').each(function () {
+                $(this).perfectScrollbar('update');
+            });
+            customScroll();
+        });
 
-  // Run the show!
-  filterList.init();
 
-  /* ---------------------------------------------------------------------- */
-  /* ----------------------------- prettyPhoto ---------------------------- */
-  /* ---------------------------------------------------------------------- */
+    // On Document Load
+    $(document).ready(function () {
+        var movementStrength = 23;
+        var height = movementStrength / $(document).height();
+        var width = movementStrength / $(document).width();
+        $("body").on('mousemove', function (e) {
+            var pageX = e.pageX - ($(document).width() / 2),
+                pageY = e.pageY - ($(document).height() / 2),
+                newvalueX = width * pageX * -1,
+                newvalueY = height * pageY * -1,
+                elements = $('.lm-animated-bg');
 
-  $("a[rel^='portfolio']").prettyPhoto({
-    animation_speed: "fast" /* fast/slow/normal */,
-    social_tools: "",
-    theme: "pp_default",
-    horizontal_padding: 5,
-    deeplinking: false
-  });
+            elements.addClass('transition');
+            elements.css({
+                "background-position": "calc( 50% + " + newvalueX + "px ) calc( 50% + " + newvalueY + "px )",
+            });
 
-  /* ---------------------------------------------------------------------- */
-  /* ------------------------------ Google Maps --------------------------- */
-  /* ---------------------------------------------------------------------- */
+            setTimeout(function () {
+                elements.removeClass('transition');
+            }, 300);
+        })
 
-/*   var map;
-  function initialize() {
-    map = new GMaps({
-      div: "#map",
-      lat: -37.817917,
-      lng: 144.965065,
-      zoom: 16
-    });
-    map.addMarker({
-      lat: -37.81792,
-      lng: 144.96506,
-      title: "Marker with InfoWindow",
-      icon: "images/map-marker.png",
-      infoWindow: {
-        content: "<p>Melbourne Victoria, 300, Australia</p>"
-      }
-    });
-  } */
+        // Mobile menu
+        $('.menu-toggle').on("click", function () {
+            $('#site_header').addClass('animate');
+            $('#site_header').toggleClass('mobile-menu-hide');
+            $('.menu-toggle').toggleClass('open');
+        });
 
-  /* ---------------------------------------------------------------------- */
-  /* --------------------------------- Blog ------------------------------- */
-  /* ---------------------------------------------------------------------- */
+        // Mobile menu hide on main menu item click
+        $('.main-menu').on("click", "a", function (e) {
+            mobileMenuHide();
+        });
 
-  // More blog
-  $("a.read_m").click(function() {
-    var pagina = $(this).attr("href");
-    var postdetail = pagina + "-page";
+        // Sidebar toggle
+        $('.sidebar-toggle').on("click", function () {
+            $('#blog-sidebar').toggleClass('open');
+        });
 
-    if (pagina.indexOf("#post-") != -1) {
-      $("#blog-page").hide();
+        // Initialize Portfolio grid
+        var $portfolio_container = $(".portfolio-grid");
+        $portfolio_container.imagesLoaded(function () {
+            portfolio_init(this);
+        });
 
-      $(postdetail).show();
-      $(".tabs-blog").trigger("click");
-    }
+        // Blog grid init
+        var $container = $(".blog-masonry");
+        $container.imagesLoaded(function () {
+            $container.masonry();
+        });
 
-    return false;
-  });
+        customScroll();
 
-  // More blog
-  $("a.read_more").click(function() {
-    var pagina = $(this).attr("href");
-    var postdetail = pagina + "-page";
+        // Text rotation
+        $('.text-rotation').owlCarousel({
+            loop: true,
+            dots: false,
+            nav: false,
+            margin: 0,
+            items: 1,
+            autoplay: true,
+            autoplayHoverPause: false,
+            autoplayTimeout: 3800,
+            animateOut: 'animated-section-scaleDown',
+            animateIn: 'animated-section-scaleUp'
+        });
 
-    if (pagina.indexOf("#post-") != -1) {
-      $("#blog-page").hide();
+        // Testimonials Slider
+        $(".testimonials.owl-carousel").owlCarousel({
+            nav: true, // Show next/prev buttons.
+            items: 3, // The number of items you want to see on the screen.
+            loop: false, // Infinity loop. Duplicate last and first items to get loop illusion.
+            navText: false,
+            autoHeight: true,
+            margin: 25,
+            responsive: {
+                // breakpoint from 0 up
+                0: {
+                    items: 1,
+                },
+                // breakpoint from 480 up
+                480: {
+                    items: 1,
+                },
+                // breakpoint from 768 up
+                768: {
+                    items: 2,
+                },
+                1200: {
+                    items: 2,
+                }
+            }
+        });
 
-      $(postdetail).show();
-      $(".tabs-blog").trigger("click");
-    }
+        // Clients Slider
+        $(".clients.owl-carousel").imagesLoaded().owlCarousel({
+            nav: true, // Show next/prev buttons.
+            items: 2, // The number of items you want to see on the screen.
+            loop: false, // Infinity loop. Duplicate last and first items to get loop illusion.
+            navText: false,
+            margin: 10,
+            autoHeight: true,
+            responsive: {
+                // breakpoint from 0 up
+                0: {
+                    items: 2,
+                },
+                // breakpoint from 768 up
+                768: {
+                    items: 4,
+                },
+                1200: {
+                    items: 5,
+                }
+            }
+        });
 
-    return false;
-  });
 
-  //pagination All
-  $(".content-post a").click(function() {
-    var pagina = $(this).attr("href");
+        //Form Controls
+        $('.form-control')
+            .val('')
+            .on("focusin", function () {
+                $(this).parent('.form-group').addClass('form-group-focus');
+            })
+            .on("focusout", function () {
+                if ($(this).val().length === 0) {
+                    $(this).parent('.form-group').removeClass('form-group-focus');
+                }
+            });
 
-    if (pagina == "#blog") {
-      $(".content-post").hide();
-      $("#blog-page").show();
-      $(".tabs-blog").trigger("click");
-    }
+        // Lightbox init
+        $('body').magnificPopup({
+            delegate: 'a.lightbox',
+            type: 'image',
+            removalDelay: 300,
 
-    return false;
-  });
-
-  //pagination blog
-  $(".content-post #pagination").click(function() {
-    var pagina = $(this).attr("href");
-    var postdetail = pagina + "-page";
-
-    if (pagina.indexOf("#post-") != -1) {
-      $("#blog-page").hide();
-      $(".content-post").hide();
-
-      $(postdetail).show();
-      $(".tabs-blog").trigger("click");
-    }
-
-    return false;
-  });
-
-  /* ---------------------------------------------------------------------- */
-  /* ---------------------------- icon menu ------------------------------- */
-  /* ---------------------------------------------------------------------- */
-
-  $(".resp-tabs-container h2.resp-accordion").each(function() {
-    if ($(this).hasClass("resp-tab-active")) {
-      $(this).append(
-        "<i class='glyphicon glyphicon-chevron-up arrow-tabs'></i>"
-      );
-    } else {
-      $(this).append(
-        "<i class='glyphicon glyphicon-chevron-down arrow-tabs'></i>"
-      );
-    }
-  });
-
-  $(".resp-tabs-container h2.resp-accordion").click(function() {
-    if ($(this).hasClass("resp-tab-active")) {
-      $(this)
-        .find("i.arrow-tabs")
-        .removeClass("glyphicon-chevron-down")
-        .addClass("glyphicon-chevron-up");
-    }
-
-    $(".resp-tabs-container h2.resp-accordion").each(function() {
-      if (!$(this).hasClass("resp-tab-active")) {
-        $(this)
-          .find("i.arrow-tabs")
-          .removeClass("glyphicon-chevron-up")
-          .addClass("glyphicon-chevron-down");
-      }
-    });
-  });
-
-  /* ---------------------------------------------------------------------- */
-  /* -------------------------------- skillbar ---------------------------- */
-  /* ---------------------------------------------------------------------- */
-
-  $(".tabs-resume").click(function() {
-    $(".skillbar").each(function() {
-      $(this)
-        .find(".skillbar-bar")
-        .width(0);
-    });
-
-    $(".skillbar").each(function() {
-      $(this)
-        .find(".skillbar-bar")
-        .animate(
-          {
-            width: $(this).attr("data-percent")
-          },
-          2000
-        );
-    });
-  });
-
-  $("#resume")
-    .prev("h2.resp-accordion")
-    .click(function() {
-      $(".skillbar").each(function() {
-        $(this)
-          .find(".skillbar-bar")
-          .width(0);
-      });
-
-      $(".skillbar").each(function() {
-        $(this)
-          .find(".skillbar-bar")
-          .animate(
-            {
-              width: $(this).attr("data-percent")
+            // Class that is added to popup wrapper and background
+            // make it unique to apply your CSS animations just to this exact popup
+            mainClass: 'mfp-fade',
+            image: {
+                // options for image content type
+                titleSrc: 'title',
+                gallery: {
+                    enabled: true
+                },
             },
-            2000
-          );
-      });
+
+            iframe: {
+                markup: '<div class="mfp-iframe-scaler">' +
+                    '<div class="mfp-close"></div>' +
+                    '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
+                    '<div class="mfp-title mfp-bottom-iframe-title"></div>' +
+                    '</div>', // HTML markup of popup, `mfp-close` will be replaced by the close button
+
+                patterns: {
+                    youtube: {
+                        index: 'youtube.com/', // String that detects type of video (in this case YouTube). Simply via url.indexOf(index).
+
+                        id: null, // String that splits URL in a two parts, second part should be %id%
+                        // Or null - full URL will be returned
+                        // Or a function that should return %id%, for example:
+                        // id: function(url) { return 'parsed id'; }
+
+                        src: '%id%?autoplay=1' // URL that will be set as a source for iframe.
+                    },
+                    vimeo: {
+                        index: 'vimeo.com/',
+                        id: '/',
+                        src: '//player.vimeo.com/video/%id%?autoplay=1'
+                    },
+                    gmaps: {
+                        index: '//maps.google.',
+                        src: '%id%&output=embed'
+                    }
+                },
+
+                srcAction: 'iframe_src', // Templating object key. First part defines CSS selector, second attribute. "iframe_src" means: find "iframe" and set attribute "src".
+            },
+
+            callbacks: {
+                markupParse: function (template, values, item) {
+                    values.title = item.el.attr('title');
+                }
+            },
+        });
+
+        //Google Maps
+        if ($(".lmpixels-map")[0]) {
+            var address = '10082 Westwanda Drive, Beverly Hills', //Replace with Your Address
+                address = encodeURIComponent(address),
+                src = 'https://maps.google.com/maps?q=' + address + '&amp;t=m&amp;z=16&amp;output=embed&amp;iwloc=near&output=embed';
+            $(".lmpixels-map iframe").attr("src", src);
+        }
     });
 
-  //Change for demo page
-  $("input:radio[name=page_builder]").on("change", function() {
-    $("input:radio[name=page_builder]").each(function() {
-      var $this = $(this);
-
-      if ($(this).prop("checked")) {
-        window.location.replace($this.val());
-      }
-    });
-
-    return false;
-  });
-
-  //hash url page changer
-  if ("onhashchange" in window) {
-    var hash = location.hash;
-
-    if (hash == "") return false;
-
-    var pages_array = ["profile", "resume", "portfolio", "blog", "contact"];
-
-    var hash = hash.replace("#", "");
-
-    if (!($.inArray(hash, pages_array) > -1)) {
-      return false;
-    } else {
-      $(".tabs-" + hash).trigger("click");
-    }
-  }
-});
+})(jQuery);
 var title = "codeposse+github";
 var myUrl = "www.ItsSoBig.com";
 var myName = "Tim Hunold";
 a = {
-  Name: "Tim Hunold",
-  Location: "LA, and sometimes Vegas",
-  Experience: "20+ years",
-  Phone: "310-929-7155 (email me fist)",
-  Site_Personal: "ItsSoBig.com",
-  Site_Professional: "linkedin.com/in/itssobig",
-  Email: title + "@gmail.com",
-  Specialties:
-    "HTML, jQuery, JavaScript, Gulp, CSS/SASS/SCSS, CMS, NGx (Angular 2- x), WebPack",
-  Domain: location.hostname 
+    Name: "Tim Hunold",
+    Location: "LA, and sometimes Vegas",
+    Experience: "20+ years",
+    Phone: "310-929-7155 (email me fist)",
+    Site_Personal: "ItsSoBig.com",
+    Site_Professional: "linkedin.com/in/itssobig",
+    Email: title + "@gmail.com",
+    Specialties:
+        "HTML, jQuery, JavaScript, Gulp, CSS/SASS/SCSS, CMS, NGx (Angular 2- x), WebPack",
+    Domain: location.hostname
 };
 console.info(
-  "%c Yeah, I got a GitHub and this is a stupid dev trick. If you saw this in console, congrats. If you saw this in view-source, bite me. " +
+    "%c Yeah, I got a GitHub and this is a stupid dev trick. If you saw this in console, congrats. If you saw this in view-source, bite me. " +
     "Now expand the object below.",
-  "background: #222; color: #bada55"
+    "background: #222; color: #bada55"
 );
 console.dir(a);
