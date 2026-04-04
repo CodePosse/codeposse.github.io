@@ -334,3 +334,20 @@ console.info(
     "background: #222; color: #bada55"
 );
 console.dir(a);
+
+const shareLinkBtn = document.getElementById('share-link-btn');
+
+shareLinkBtn.addEventListener('click', async () => {
+    try {
+        const url = document.location.href;;
+        const share = await navigator.share({
+            title: document.title,
+            url,
+        });
+
+        console.log('Shared successfully:');
+    } catch (error) {
+        console.error('Error sharing content:', error);
+    }
+});
+        
