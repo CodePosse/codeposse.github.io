@@ -388,6 +388,11 @@ function initEmailReveal() {
     });
   });
 }
+function decodePhone() {
+  const chars = [49,45,51,49,48,45,53,57,49,45,54,57,57,57];
+  return String.fromCharCode(...chars);
+}
+
 function initPhoneReveal() {
   const buttons = document.querySelectorAll('.phone-reveal');
   if (!buttons.length) return;
@@ -398,7 +403,7 @@ function initPhoneReveal() {
 
       const phone = decodePhone();
 
-      // IMPORTANT: tel should be clean (no dashes)
+      // clean number for tel:
       const tel = 'tel:' + phone.replace(/[^0-9+]/g, '');
 
       const targetId = button.getAttribute('data-phone-target');
@@ -417,13 +422,9 @@ function initPhoneReveal() {
       }
 
       button.hidden = true;
-
-      // auto-open dialer (mobile / supported desktop apps)
-      window.location.href = tel;
     });
   });
 }
-
 document.addEventListener('DOMContentLoaded', function () {
   initEmailReveal();
   initPhoneReveal();
