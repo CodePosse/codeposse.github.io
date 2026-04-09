@@ -317,16 +317,16 @@ var title = "codeposse+github";
 var myUrl = "www.ItsSoBig.com";
 var myName = "Tim Hunold";
 a = {
-    Name: "Tim Hunold",
-    Location: "LA, and sometimes Vegas",
-    Experience: "20+ years",
-    Phone: "310-591-6999 (email me fist)",
-    Site_Personal: "ItsSoBig.com",
-    Site_Professional: "linkedin.com/in/itssobig",
-    Email: title + "@gmail.com",
-    Specialties:
-        "HTML, jQuery, JavaScript, Gulp, CSS/SASS/SCSS, CMS, NGx (Angular 2- x), WebPack",
-    Domain: location.hostname
+  Name: "Tim Hunold",
+  Location: "LA, and sometimes Vegas",
+  Experience: "20+ years",
+  Phone: "Reveal on contact section",
+  Site_Personal: "ItsSoBig.com",
+  Site_Professional: "linkedin.com/in/itssobig",
+  Email: "Reveal on contact section",
+  Specialties:
+    "HTML, jQuery, NPM, JavaScript, Gulp, CSS/SASS/SCSS, CMS, NGx, (Angular 2-20), WebPack",
+  Domain: location.hostname
 };
 console.info(
     "%c Yeah, I got a GitHub and this is a stupid dev trick. If you saw this in console, congrats. If you saw this in view-source, bite me. " +
@@ -343,16 +343,42 @@ if (shareLinkBtn) {
       const url = document.location.href;
       await navigator.share({
         title: document.title,
-        url
+        url,
       });
     } catch (error) {
       console.error('Error sharing content:', error);
     }
   });
 }
+
 function decodeEmail() {
   const chars = [99,111,100,101,112,111,115,115,101,64,103,109,97,105,108,46,99,111,109];
   return String.fromCharCode(...chars);
+}
+
+function decodePhone() {
+  const chars = [49,45,51,49,48,45,53,57,49,45,54,57,57,57];
+  return String.fromCharCode(...chars);
+}
+
+function revealLink(button, targetAttr, targetPrefix, hrefBuilder, textValue, className, ariaPrefix) {
+  const targetId = button.getAttribute(targetAttr);
+  const target = targetId ? document.getElementById(targetId) : null;
+
+  const link = document.createElement('a');
+  link.href = hrefBuilder(textValue);
+  link.textContent = textValue;
+  link.className = className;
+  link.setAttribute('aria-label', ariaPrefix + ' ' + textValue);
+
+  if (target) {
+    target.innerHTML = '';
+    target.appendChild(link);
+  } else {
+    button.insertAdjacentElement('afterend', link);
+  }
+
+  button.hidden = true;
 }
 
 function initEmailReveal() {
@@ -364,31 +390,19 @@ function initEmailReveal() {
       e.preventDefault();
 
       const email = decodeEmail();
-      const mailto = 'mailto:' + email + '?subject=' + encodeURIComponent('Hello Tim');
-
-      const targetId = button.getAttribute('data-email-target');
-      const target = targetId ? document.getElementById(targetId) : null;
-
-      const link = document.createElement('a');
-      link.href = mailto;
-      link.textContent = email;
-      link.className = 'revealed-email-link';
-      link.setAttribute('aria-label', 'Email ' + email);
-
-      if (target) {
-        target.innerHTML = '';
-        target.appendChild(link);
-      } else {
-        button.insertAdjacentElement('afterend', link);
-      }
-
-      button.hidden = true;
+      revealLink(
+        button,
+        'data-email-target',
+        'email',
+        function (value) {
+          return 'mailto:' + value + '?subject=' + encodeURIComponent('Hello Tim');
+        },
+        email,
+        'revealed-email-link',
+        'Email'
+      );
     });
   });
-}
-function decodePhone() {
-  const chars = [49,45,51,49,48,45,53,57,49,45,54,57,57,57];
-  return String.fromCharCode(...chars);
 }
 
 function initPhoneReveal() {
@@ -400,29 +414,21 @@ function initPhoneReveal() {
       e.preventDefault();
 
       const phone = decodePhone();
-
-      // clean number for tel:
-      const tel = 'tel:' + phone.replace(/[^0-9+]/g, '');
-
-      const targetId = button.getAttribute('data-phone-target');
-      const target = targetId ? document.getElementById(targetId) : null;
-
-      const link = document.createElement('a');
-      link.href = tel;
-      link.textContent = phone;
-      link.className = 'revealed-phone-link';
-
-      if (target) {
-        target.innerHTML = '';
-        target.appendChild(link);
-      } else {
-        button.insertAdjacentElement('afterend', link);
-      }
-
-      button.hidden = true;
+      revealLink(
+        button,
+        'data-phone-target',
+        'phone',
+        function (value) {
+          return 'tel:' + value.replace(/[^0-9+]/g, '');
+        },
+        phone,
+        'revealed-phone-link',
+        'Call'
+      );
     });
   });
 }
+
 document.addEventListener('DOMContentLoaded', function () {
   initEmailReveal();
   initPhoneReveal();
