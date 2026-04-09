@@ -388,5 +388,43 @@ function initEmailReveal() {
     });
   });
 }
+function initPhoneReveal() {
+  const buttons = document.querySelectorAll('.phone-reveal');
+  if (!buttons.length) return;
 
-document.addEventListener('DOMContentLoaded', initEmailReveal);
+  buttons.forEach(function (button) {
+    button.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const phone = decodePhone();
+
+      // IMPORTANT: tel should be clean (no dashes)
+      const tel = 'tel:' + phone.replace(/[^0-9+]/g, '');
+
+      const targetId = button.getAttribute('data-phone-target');
+      const target = targetId ? document.getElementById(targetId) : null;
+
+      const link = document.createElement('a');
+      link.href = tel;
+      link.textContent = phone;
+      link.className = 'revealed-phone-link';
+
+      if (target) {
+        target.innerHTML = '';
+        target.appendChild(link);
+      } else {
+        button.insertAdjacentElement('afterend', link);
+      }
+
+      button.hidden = true;
+
+      // auto-open dialer (mobile / supported desktop apps)
+      window.location.href = tel;
+    });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  initEmailReveal();
+  initPhoneReveal();
+});
