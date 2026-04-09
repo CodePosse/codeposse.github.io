@@ -1439,8 +1439,8 @@ textarea.form-control, textarea.form-control:focus {
 }
 
 .certi-date {
-  font-size: .7em;
-  color: #777;
+  font-size: .75em;
+  color: #e4e4e4;
   opacity: .7;
 }
 /* --- End of Certificates --- */
