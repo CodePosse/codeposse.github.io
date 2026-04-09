@@ -125,10 +125,10 @@
 
         <div class="social-links">
           <ul>
-            <li><a href="https://www.linkedin.com/in/itssobig" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <li><a href="https://www.linkedin.com/in/itssobig" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             </li>
-            <li><a href="https://github.com/CodePosse" target="_blank"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://profile.codersrank.io/user/codeposse" target="_blank"><i
+            <li><a href="https://github.com/CodePosse" target="_blank" aria-label="Github"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://profile.codersrank.io/user/codeposse" target="_blank" aria-label="CodersRank"><i
                   class="fab fa-hackerrank"></i></a></li>
           </ul>
         </div>
@@ -1177,13 +1177,7 @@
                         </div>
                       </div>
                     </div>
-                    <div>
-                      <div>
-                        <div><a id="navigation-add-edit-deeplink-edit-licenses-and-certifications"
-                            href="https://www.linkedin.com/in/itssobig/add-edit/CERTIFICATION/?profileFormEntryPoint=PROFILE_SECTION&amp;entityUrn=urn%3Ali%3Afsd_profileCertification%3A%28ACoAAAB-uEABYctTHh2rkfcubc3abAl-V33aNrk%2C3%29&amp;trackingId=r42hm1eQR8SoubDDgoZiRA%3D%3D&amp;desktopBackground=PROFILE_DETAIL_SCREEN"></a>
-                        </div>
-                      </div>
-                    </div>
+
                   </div>
                 </div>
                 <div class="col-xs-12 col-sm-6">
@@ -1382,7 +1376,7 @@
                         <div class="left-column">
                           <div class="form-group form-group-with-icon">
                             <input disabled id="form_name" type="text" name="name" class="form-control" placeholder=""
-                              required="required" data-error="Name is required.">
+                              required="required" data-error="Name is required." aria-label="Full Name">
                             <label>Full Name</label>
                             <div class="form-control-border"></div>
                             <div class="help-block with-errors"></div>
@@ -1390,7 +1384,7 @@
 
                           <div class="form-group form-group-with-icon">
                             <input disabled id="form_email" type="email" name="email" class="form-control" placeholder=""
-                              required="required" data-error="Valid email is required.">
+                              required="required" data-error="Valid email is required." aria-label="Email Address">
                             <label>Email Address</label>
                             <div class="form-control-border"></div>
                             <div class="help-block with-errors"></div>
@@ -1398,7 +1392,7 @@
 
                           <div class="form-group form-group-with-icon">
                             <input disabled id="form_subject" type="text" name="subject" class="form-control" placeholder=""
-                              required="required" data-error="Subject is required.">
+                              required="required" data-error="Subject is required." aria-label="Subject">
                             <label>Subject</label>
                             <div class="form-control-border"></div>
                             <div class="help-block with-errors"></div>
@@ -1407,17 +1401,17 @@
                         <div class="right-column">
                           <div class="form-group form-group-with-icon">
                             <textarea disabled id="form_message" name="message" class="form-control" placeholder="" rows="7"
-                              required="required" data-error="Please, leave me a message."></textarea>
+                              required="required" data-error="Please, leave me a message." aria-label="Message"></textarea>
                             <label>Message</label>
                             <div class="form-control-border"></div>
                             <div class="help-block with-errors"></div>
                           </div>
                         </div>
                       </div>
-
+<label for="g-recaptcha-response">Captcha</label>
                       <div class="g-recaptcha" data-sitekey="6LdqmCAUAAAAAMMNEZvn6g4W5e0or2sZmAVpxVqI"></div>
 
-                      <input type="submit" class="button btn-send" value="Send message disabled" disabled>
+                      <button type="submit" class="button btn-send" disabled>Send Message</button>
                     </div>
                   </form>
                 </div>
