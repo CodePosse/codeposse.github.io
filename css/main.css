@@ -2937,7 +2937,7 @@ blockquote {
     font-size: 18px;
   }
 }
-
+.phone-reveal,
 .contact-submit {
   cursor: pointer;
 }

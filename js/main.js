@@ -373,6 +373,7 @@ function initEmailReveal() {
       link.href = mailto;
       link.textContent = email;
       link.className = 'revealed-email-link';
+      link.setAttribute('aria-label', 'Email ' + email);
 
       if (target) {
         target.innerHTML = '';
@@ -382,9 +383,6 @@ function initEmailReveal() {
       }
 
       button.hidden = true;
-
-      // launch the mail client immediately
-      window.location.href = mailto;
     });
   });
 }
