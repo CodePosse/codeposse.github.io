@@ -337,48 +337,56 @@ console.dir(a);
 
 const shareLinkBtn = document.getElementById('share-link-btn');
 
-shareLinkBtn.addEventListener('click', async () => {
+if (shareLinkBtn) {
+  shareLinkBtn.addEventListener('click', async () => {
     try {
-        const url = document.location.href;;
-        const share = await navigator.share({
-            title: document.title,
-            url,
-        });
-
-        console.log('Shared successfully:');
+      const url = document.location.href;
+      await navigator.share({
+        title: document.title,
+        url
+      });
     } catch (error) {
-        console.error('Error sharing content:', error);
+      console.error('Error sharing content:', error);
     }
-});
-
+  });
+}
 function decodeEmail() {
   const chars = [99,111,100,101,112,111,115,115,101,64,103,109,97,105,108,46,99,111,109];
-  return String.fromCharCode.apply(null, chars);
+  return String.fromCharCode(...chars);
 }
 
-  function initEmailReveal() {
-    const buttons = document.querySelectorAll('.email-reveal');
-    if (!buttons.length) return;
-    buttons.forEach(function (button) {
-      button.addEventListener('click', function () {
-        const email = decodeEmail();
-        const targetId = button.getAttribute('data-email-target');
-        const target = targetId ? document.getElementById(targetId) : null;
-        const link = document.createElement('a');
-        link.href = 'mailto:' + email + '?subject=Hello%20Tim';
-        link.textContent = email;
-        link.className = 'revealed-email-link';
-        if (target) {
-          target.innerHTML = '';
-          target.appendChild(link);
-        } else {
-          button.insertAdjacentElement('afterend', link);
-        }
-        button.setAttribute('hidden', 'hidden');
-      });
-    });
-  }
+function initEmailReveal() {
+  const buttons = document.querySelectorAll('.email-reveal');
+  if (!buttons.length) return;
 
-  document.addEventListener('DOMContentLoaded', function () {
-    initEmailReveal();
+  buttons.forEach(function (button) {
+    button.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const email = decodeEmail();
+      const mailto = 'mailto:' + email + '?subject=' + encodeURIComponent('Hello Tim');
+
+      const targetId = button.getAttribute('data-email-target');
+      const target = targetId ? document.getElementById(targetId) : null;
+
+      const link = document.createElement('a');
+      link.href = mailto;
+      link.textContent = email;
+      link.className = 'revealed-email-link';
+
+      if (target) {
+        target.innerHTML = '';
+        target.appendChild(link);
+      } else {
+        button.insertAdjacentElement('afterend', link);
+      }
+
+      button.hidden = true;
+
+      // launch the mail client immediately
+      window.location.href = mailto;
+    });
   });
+}
+
+document.addEventListener('DOMContentLoaded', initEmailReveal);
