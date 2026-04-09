@@ -350,4 +350,35 @@ shareLinkBtn.addEventListener('click', async () => {
         console.error('Error sharing content:', error);
     }
 });
-        
+
+function decodeEmail() {
+  const chars = [99,111,100,101,112,111,115,115,101,64,103,109,97,105,108,46,99,111,109];
+  return String.fromCharCode.apply(null, chars);
+}
+
+  function initEmailReveal() {
+    const buttons = document.querySelectorAll('.email-reveal');
+    if (!buttons.length) return;
+    buttons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        const email = decodeEmail();
+        const targetId = button.getAttribute('data-email-target');
+        const target = targetId ? document.getElementById(targetId) : null;
+        const link = document.createElement('a');
+        link.href = 'mailto:' + email + '?subject=Hello%20Tim';
+        link.textContent = email;
+        link.className = 'revealed-email-link';
+        if (target) {
+          target.innerHTML = '';
+          target.appendChild(link);
+        } else {
+          button.insertAdjacentElement('afterend', link);
+        }
+        button.setAttribute('hidden', 'hidden');
+      });
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    initEmailReveal();
+  });
