@@ -245,15 +245,7 @@
                 if ($(this).val().length === 0) {
                     $(this).parent('.form-group').removeClass('form-group-focus');
                 }
-            });
-
-        //Google Maps
-        if ($(".lmpixels-map")[0]) {
-            var address = '10082 Westwanda Drive, Beverly Hills', //Replace with Your Address
-                address = encodeURIComponent(address),
-                src = 'https://maps.google.com/maps?q=' + address + '&amp;t=m&amp;z=16&amp;output=embed&amp;iwloc=near&output=embed';
-            $(".lmpixels-map iframe").attr("src", src);
-        }
+            });        
     });
 
 })(jQuery);
