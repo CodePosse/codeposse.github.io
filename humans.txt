@@ -22,3 +22,9 @@ Last update: 2026/09/02
 Standards: HTML5, CSS3, VanillaJS                     
 Components: None
 Software: VS Code, Claude, Clawbot, ChatGPT
+
+/* COOL */
+Things I am working on 
+https://callsheet.fyi/
+https://tim.workisboring.com/
+https://filmsupplies.com/
