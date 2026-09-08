@@ -1,0 +1,200 @@
+:root {
+  --sc-ink: #241521;
+  --sc-cream: #fff8ef;
+  --sc-paper: #fffdf9;
+  --sc-plum: #6f2b59;
+  --sc-magenta: #d13b86;
+  --sc-coral: #f56f61;
+  --sc-gold: #d9a441;
+  --sc-mint: #87c9b9;
+  --sc-muted: #7d6d78;
+  --sc-line: #eadfd6;
+  --sc-shadow: 0 18px 50px rgba(58, 28, 45, .10);
+}
+
+html { scroll-behavior: smooth; }
+body {
+  background: var(--sc-cream);
+  color: var(--sc-ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+a { color: var(--sc-plum); }
+a:hover { color: var(--sc-magenta); }
+
+.navbar {
+  background: rgba(255, 248, 239, .94);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--sc-line);
+}
+.navbar-brand {
+  font-weight: 900;
+  letter-spacing: -.04em;
+  color: var(--sc-ink) !important;
+}
+.brand-dot { color: var(--sc-magenta); }
+.nav-link { font-weight: 700; color: var(--sc-ink) !important; }
+.nav-link:hover { color: var(--sc-magenta) !important; }
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 7rem 0 5rem;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(245,111,97,.22), transparent 30%),
+    radial-gradient(circle at 80% 15%, rgba(209,59,134,.16), transparent 28%),
+    radial-gradient(circle at 70% 80%, rgba(217,164,65,.15), transparent 34%),
+    linear-gradient(135deg, #fff8ef 0%, #fff3f4 50%, #fffaf0 100%);
+}
+.hero-kicker,
+.eyebrow {
+  display: inline-flex;
+  gap: .5rem;
+  align-items: center;
+  font-size: .8rem;
+  font-weight: 900;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--sc-plum);
+}
+.hero h1 {
+  font-size: clamp(3.2rem, 9vw, 7.5rem);
+  line-height: .9;
+  letter-spacing: -.065em;
+  font-weight: 950;
+  margin: .75rem 0 1.25rem;
+}
+.hero .lead { max-width: 760px; font-size: clamp(1.15rem, 2vw, 1.45rem); color: #5e4d58; }
+
+.btn-sincity {
+  background: linear-gradient(135deg, var(--sc-magenta), var(--sc-coral));
+  border: 0;
+  color: white;
+  font-weight: 800;
+  box-shadow: 0 8px 24px rgba(209,59,134,.22);
+}
+.btn-sincity:hover { color: white; transform: translateY(-1px); }
+.btn-outline-sincity { border: 2px solid var(--sc-ink); color: var(--sc-ink); font-weight: 800; }
+.btn-outline-sincity:hover { background: var(--sc-ink); color: white; }
+
+.section-pad { padding: 5rem 0; }
+.section-title { font-weight: 950; letter-spacing: -.045em; font-size: clamp(2.2rem, 4vw, 4rem); }
+.section-subtitle { color: var(--sc-muted); max-width: 760px; }
+
+.category-card,
+.guide-card,
+.venue-card,
+.info-card {
+  background: var(--sc-paper);
+  border: 1px solid var(--sc-line);
+  border-radius: 1.25rem;
+  box-shadow: var(--sc-shadow);
+  transition: .2s ease;
+}
+.category-card:hover,
+.guide-card:hover,
+.venue-card:hover { transform: translateY(-4px); box-shadow: 0 24px 60px rgba(58, 28, 45, .14); }
+.category-icon {
+  width: 3rem; height: 3rem; border-radius: 1rem;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: #ffe7ef; color: var(--sc-magenta); font-size: 1.25rem;
+}
+.category-card:nth-child(4n+2) .category-icon { background: #fff0d3; color: #a46b00; }
+.category-card:nth-child(4n+3) .category-icon { background: #e8f7f2; color: #287e6a; }
+.category-card:nth-child(4n+4) .category-icon { background: #f0e8f5; color: var(--sc-plum); }
+
+.audience-pill {
+  border: 1px solid var(--sc-line);
+  background: white;
+  color: var(--sc-ink);
+  font-weight: 800;
+  border-radius: 999px;
+  padding: .55rem .9rem;
+}
+.audience-pill:hover, .audience-pill.active { background: var(--sc-ink); color: white; }
+
+.badge-soft-pink { background: #ffe4ef; color: #8f2458; }
+.badge-soft-gold { background: #fff0cf; color: #835a00; }
+.badge-soft-mint { background: #e5f6f1; color: #226d5c; }
+.badge-soft-plum { background: #efe5f1; color: #63305e; }
+.badge-soft-coral { background: #ffe7e3; color: #9d4038; }
+
+.venue-meta { color: var(--sc-muted); font-size: .93rem; }
+.verified { color: #287e6a; font-weight: 800; }
+
+.callout {
+  background: linear-gradient(135deg, #fff0da, #ffe6ef);
+  border: 1px solid #f3d7c6;
+  border-radius: 1.5rem;
+}
+
+.footer {
+  background: var(--sc-ink);
+  color: #f6edf2;
+}
+.footer a { color: #ffd6e7; text-decoration: none; }
+.footer a:hover { color: white; }
+
+.age-gate .modal-content {
+  border: 0;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background: var(--sc-paper);
+  box-shadow: 0 30px 100px rgba(0,0,0,.28);
+}
+.age-gate-mark {
+  display:inline-flex; align-items:center; justify-content:center;
+  width:4rem; height:4rem; border-radius:1.25rem;
+  background:linear-gradient(135deg,var(--sc-magenta),var(--sc-coral)); color:#fff; font-size:1.6rem;
+}
+
+.filter-bar { position: sticky; top: 68px; z-index: 10; background: rgba(255,248,239,.96); backdrop-filter: blur(10px); border-bottom:1px solid var(--sc-line); }
+.search-input { border-radius: 999px; border: 1px solid var(--sc-line); background:white; }
+
+.venue-hero {
+  padding: 5rem 0 3rem;
+  background: linear-gradient(135deg, #fff0f4, #fff8ec);
+  border-bottom:1px solid var(--sc-line);
+}
+
+.know-grid dt { color: var(--sc-muted); font-weight: 700; }
+.know-grid dd { font-weight: 850; }
+
+@media (max-width: 767.98px) {
+  .hero { padding-top: 5.5rem; }
+  .filter-bar { top: 60px; }
+}
+
+
+/* --- Sin City mythology / editorial layer --- */
+.hero-mantra {
+  display:inline-block; margin-top:1rem; padding:.45rem .8rem;
+  border:1px solid rgba(111,43,89,.16); border-radius:999px;
+  background:rgba(255,255,255,.58); color:var(--sc-plum);
+  font-weight:900; letter-spacing:.02em;
+}
+.neon-script { color:var(--sc-magenta); font-style:italic; font-weight:900; }
+.vice-card { position:relative; overflow:hidden; }
+.vice-card::after { content:""; position:absolute; width:90px; height:90px; right:-30px; top:-30px; border-radius:50%; background:rgba(209,59,134,.08); }
+.story-strip { background:var(--sc-ink); color:#fff7ef; }
+.story-strip .eyebrow { color:#ffc4dc; }
+.story-strip .btn-outline-sincity { border-color:#fff7ef; color:#fff7ef; }
+.story-strip .btn-outline-sincity:hover { background:#fff7ef; color:var(--sc-ink); }
+.vibe-meter { padding:1rem; border-radius:1rem; background:#fff7f2; border:1px solid var(--sc-line); }
+.vibe-meter .vibe-label { font-size:.78rem; text-transform:uppercase; letter-spacing:.12em; font-weight:900; color:var(--sc-plum); }
+.vibe-dots { display:flex; gap:.4rem; margin:.55rem 0 .35rem; }
+.vibe-dot { width:1rem; height:1rem; border-radius:50%; background:#eadfd6; }
+.vibe-dot.on { background:linear-gradient(135deg,var(--sc-magenta),var(--sc-coral)); box-shadow:0 0 0 3px rgba(209,59,134,.08); }
+.vibe-copy { color:var(--sc-muted); font-size:.9rem; margin:0; }
+.alibi-card { background:linear-gradient(135deg,#f8eadf,#ffe1ec); border:1px dashed #d8aebf; border-radius:1.3rem; }
+.morning-card { background:linear-gradient(135deg,#eef8f4,#fff6df); }
+.microcopy { color:var(--sc-muted); font-size:.86rem; }
+.kicker-row { display:flex; flex-wrap:wrap; gap:.55rem; margin-top:1.1rem; }
+.kicker-chip { border-radius:999px; padding:.4rem .72rem; background:#fff; border:1px solid var(--sc-line); font-size:.82rem; font-weight:800; }
+
+/* --- Only in Vegas experience category --- */
+.only-hero { padding:6rem 0 4rem; background:radial-gradient(circle at 80% 20%,#ffd9e8 0,transparent 28%),linear-gradient(135deg,#fff2df,#fff8f1 55%,#f3e8f2); border-bottom:1px solid var(--sc-line); }
+.only-vegas-band { background:linear-gradient(135deg,#fff0d2,#ffe0eb 52%,#eee4f2); border:1px solid #e7cbbf; border-radius:1.6rem; box-shadow:var(--sc-shadow); }
+.mini-experience { min-height:145px; display:flex; flex-direction:column; gap:.25rem; justify-content:center; text-decoration:none; color:var(--sc-ink); background:rgba(255,255,255,.72); border:1px solid rgba(111,43,89,.12); border-radius:1.15rem; padding:1rem; transition:.2s ease; }
+.mini-experience:hover { transform:translateY(-3px); background:#fff; color:var(--sc-magenta); }
+.mini-experience i { font-size:1.4rem; color:var(--sc-magenta); }
+.mini-experience span { font-size:.82rem; color:var(--sc-muted); }

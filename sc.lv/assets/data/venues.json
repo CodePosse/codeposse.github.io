@@ -1,0 +1,391 @@
+[
+  {
+    "id": "red-rooster",
+    "name": "Red Rooster",
+    "categoryLabel": "Lifestyle Club",
+    "categories": [
+      "lifestyle-club"
+    ],
+    "audience": [
+      "couples",
+      "groups-men",
+      "groups-women",
+      "single-men",
+      "single-women"
+    ],
+    "age": "21+",
+    "description": "A long-running Las Vegas on-premise lifestyle club with scheduled parties, social areas and late-night events.",
+    "badges": [
+      "Lifestyle",
+      "On-premise",
+      "Couples & singles"
+    ],
+    "verified": "Sep 2026",
+    "localUrl": "venue/red-rooster.html"
+  },
+  {
+    "id": "green-door",
+    "name": "Green Door",
+    "categoryLabel": "Lifestyle Club",
+    "categories": [
+      "lifestyle-club"
+    ],
+    "audience": [
+      "couples",
+      "groups-men",
+      "groups-women",
+      "single-men",
+      "single-women"
+    ],
+    "age": "21+",
+    "description": "An established Las Vegas adult social club with late-night hours and different membership pricing by guest type.",
+    "badges": [
+      "Lifestyle",
+      "Late night",
+      "Singles allowed"
+    ],
+    "verified": "Sep 2026",
+    "localUrl": "venue/green-door.html"
+  },
+  {
+    "id": "sea-mountain",
+    "name": "Sea Mountain Spa",
+    "categoryLabel": "Clothing Optional",
+    "categories": [
+      "clothing-optional",
+      "lifestyle-club"
+    ],
+    "audience": [
+      "couples",
+      "groups-men",
+      "groups-women",
+      "single-women"
+    ],
+    "age": "Check venue",
+    "description": "A private, membership-based, clothing-optional Las Vegas lifestyle retreat for couples and women.",
+    "badges": [
+      "Private",
+      "Clothing optional",
+      "Couples & women"
+    ],
+    "verified": "Sep 2026",
+    "localUrl": "venue/sea-mountain.html"
+  },
+  {
+    "id": "entourage",
+    "name": "Entourage Vegas",
+    "categoryLabel": "LGBTQ+ Spa",
+    "categories": [
+      "lgbtq"
+    ],
+    "audience": [
+      "couples",
+      "groups-men",
+      "groups-women",
+      "single-men"
+    ],
+    "age": "Check current policy",
+    "description": "A long-running Las Vegas men’s spa and social venue serving the LGBTQ+ community and visitors.",
+    "badges": [
+      "LGBTQ+",
+      "Men’s spa",
+      "Social"
+    ],
+    "verified": "Sep 2026",
+    "localUrl": "venue/entourage.html"
+  },
+  {
+    "id": "erotic-heritage-museum",
+    "name": "Erotic Heritage Museum",
+    "categoryLabel": "Erotic Attraction",
+    "categories": [
+      "attraction",
+      "museum"
+    ],
+    "audience": [
+      "couples",
+      "groups-men",
+      "groups-women",
+      "single-men",
+      "single-women"
+    ],
+    "age": "18+",
+    "description": "A 24,000-square-foot museum exploring sexuality through art, history, culture, science and interactive exhibitions.",
+    "badges": [
+      "Museum",
+      "18+",
+      "First-timer friendly"
+    ],
+    "verified": "Sep 2026",
+    "localUrl": "venue/erotic-heritage-museum.html"
+  },
+  {
+    "id": "swingers-circle",
+    "name": "Swingers Circle",
+    "categoryLabel": "Lifestyle Party",
+    "categories": [
+      "lifestyle-club"
+    ],
+    "audience": [
+      "couples",
+      "groups-men",
+      "groups-women",
+      "single-women"
+    ],
+    "age": "21+",
+    "description": "A small-format Las Vegas lifestyle party held at rotating hotel locations, limited to couples and solo women.",
+    "badges": [
+      "Lifestyle party",
+      "Couples & women",
+      "Reservation"
+    ],
+    "verified": "Sep 2026",
+    "localUrl": "venue/swingers-circle.html"
+  },
+  {
+    "id": "sheris-ranch",
+    "name": "Sheri's Ranch",
+    "categoryLabel": "Legal Brothel Near Las Vegas",
+    "categories": [
+      "brothel"
+    ],
+    "audience": [
+      "couples",
+      "groups-men",
+      "groups-women",
+      "single-men",
+      "single-women"
+    ],
+    "age": "21+",
+    "description": "A licensed legal brothel and resort in Nye County, outside Las Vegas and Clark County.",
+    "badges": [
+      "Nye County",
+      "21+",
+      "Legal brothel"
+    ],
+    "verified": "Sep 2026",
+    "localUrl": "venue/sheris-ranch.html"
+  },
+  {
+    "id": "mansion",
+    "name": "Mansion",
+    "categoryLabel": "Adult Nightlife",
+    "categories": [
+      "nightlife"
+    ],
+    "audience": [
+      "couples",
+      "groups-men",
+      "groups-women",
+      "single-men",
+      "single-women"
+    ],
+    "age": "21+",
+    "description": "An adult nightlife concept marketed toward couples, bachelor/bachelorette groups and visitors looking for both male and female revue experiences.",
+    "badges": [
+      "Nightlife",
+      "Couples",
+      "Groups"
+    ],
+    "verified": "Sep 2026",
+    "localUrl": "venue/mansion.html"
+  },
+  {
+    "id": "avn-expo",
+    "name": "AVN Expo",
+    "categoryLabel": "Event & Convention",
+    "categories": [
+      "convention",
+      "event"
+    ],
+    "audience": [
+      "couples",
+      "groups-men",
+      "groups-women",
+      "single-men",
+      "single-women"
+    ],
+    "age": "18+ areas vary",
+    "description": "Las Vegas’s major annual adult-entertainment convention week, with fan, industry and awards programming.",
+    "badges": [
+      "Convention",
+      "Annual",
+      "Events"
+    ],
+    "verified": "Sep 2026",
+    "localUrl": "venue/avn-expo.html"
+  },
+  {
+    "id": "club-trans-action",
+    "name": "Club Trans-Action",
+    "categoryLabel": "LGBTQ+ / Trans Nightlife",
+    "categories": [
+      "lgbtq",
+      "nightlife"
+    ],
+    "audience": [
+      "couples",
+      "groups-men",
+      "groups-women",
+      "single-men",
+      "single-women"
+    ],
+    "age": "Verify before visiting",
+    "description": "A trans-focused adult nightlife listing for visitors seeking LGBTQ+ and gender-diverse adult entertainment in Las Vegas.",
+    "badges": [
+      "LGBTQ+",
+      "Trans-inclusive",
+      "Verify event"
+    ],
+    "verified": "Sep 2026",
+    "localUrl": "venue/club-trans-action.html"
+  },
+  {
+    "id": "love-cloud",
+    "name": "Love Cloud",
+    "categoryLabel": "Only in Vegas / Couples Experience",
+    "categories": [
+      "only-in-vegas",
+      "attraction"
+    ],
+    "audience": [
+      "couples"
+    ],
+    "age": "18+",
+    "description": "Private romantic flights over Las Vegas, including Love Cloud’s famous Mile High Club experience for adventurous couples.",
+    "badges": [
+      "Only in Vegas",
+      "Couples",
+      "Private flight"
+    ],
+    "verified": "Sep 2026",
+    "localUrl": "venue/love-cloud.html"
+  },
+  {
+    "id": "moorea-beach-club",
+    "name": "Moorea Beach Club",
+    "categoryLabel": "Only in Vegas / Toptional Pool",
+    "categories": [
+      "only-in-vegas",
+      "clothing-optional",
+      "pool"
+    ],
+    "audience": [
+      "couples",
+      "groups-men",
+      "groups-women",
+      "single-men",
+      "single-women"
+    ],
+    "age": "21+",
+    "description": "Mandalay Bay’s adults-only, upscale toptional pool with cabanas, daybeds and a private resort atmosphere.",
+    "badges": [
+      "Toptional",
+      "21+",
+      "Pool"
+    ],
+    "verified": "Sep 2026",
+    "localUrl": "venue/moorea-beach-club.html"
+  },
+  {
+    "id": "puppetry-of-the-penis",
+    "name": "Puppetry of the Penis",
+    "categoryLabel": "Only in Vegas / Adult Comedy",
+    "categories": [
+      "only-in-vegas",
+      "adult-show",
+      "attraction"
+    ],
+    "audience": [
+      "couples",
+      "groups-men",
+      "groups-women",
+      "single-men",
+      "single-women"
+    ],
+    "age": "18+",
+    "description": "The intentionally outrageous “genital origami” comedy and performance-art show inside the Erotic Heritage Museum.",
+    "badges": [
+      "Adult comedy",
+      "18+",
+      "Only in Vegas"
+    ],
+    "verified": "Sep 2026",
+    "localUrl": "venue/puppetry-of-the-penis.html"
+  },
+  {
+    "id": "absinthe",
+    "name": "Absinthe",
+    "categoryLabel": "Only in Vegas / Raunchy Circus",
+    "categories": [
+      "only-in-vegas",
+      "adult-show"
+    ],
+    "audience": [
+      "couples",
+      "groups-men",
+      "groups-women",
+      "single-men",
+      "single-women"
+    ],
+    "age": "18+",
+    "description": "An intimate adults-only circus-variety show at Caesars Palace mixing elite acrobatics with aggressively raunchy comedy.",
+    "badges": [
+      "Circus",
+      "Adult comedy",
+      "18+"
+    ],
+    "verified": "Sep 2026",
+    "localUrl": "venue/absinthe.html"
+  },
+  {
+    "id": "rouge",
+    "name": "ROUGE",
+    "categoryLabel": "Only in Vegas / Adult Revue",
+    "categories": [
+      "only-in-vegas",
+      "adult-show"
+    ],
+    "audience": [
+      "couples",
+      "groups-men",
+      "groups-women",
+      "single-men",
+      "single-women"
+    ],
+    "age": "18+",
+    "description": "An adults-only STRAT production blending burlesque, topless male and female performers, acrobatics and comedy.",
+    "badges": [
+      "Burlesque",
+      "Topless revue",
+      "18+"
+    ],
+    "verified": "Sep 2026",
+    "localUrl": "venue/rouge.html"
+  },
+  {
+    "id": "x-burlesque",
+    "name": "X Burlesque",
+    "categoryLabel": "Only in Vegas / Topless Burlesque",
+    "categories": [
+      "only-in-vegas",
+      "adult-show"
+    ],
+    "audience": [
+      "couples",
+      "groups-men",
+      "groups-women",
+      "single-men",
+      "single-women"
+    ],
+    "age": "18+",
+    "description": "Flamingo Las Vegas’s long-running late-night topless burlesque revue with dance, music and playful audience interaction.",
+    "badges": [
+      "Topless revue",
+      "Burlesque",
+      "18+"
+    ],
+    "verified": "Sep 2026",
+    "localUrl": "venue/x-burlesque.html"
+  }
+]
