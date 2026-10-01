@@ -1,0 +1,15 @@
+# CodePosse on Github, LA based UX/UI/Front End
+
+> Tim, 'CodePosse' UI/UX/Front End Los Angeles
+
+https://codeposse.github.io
+
+## Pages
+
+- [ugly vibe code design list from YT: chill dude explains](https://tim.workisboring.com/code)
+- [Bookmarklet for research](https://tim.workisboring.com/book.html)
+
+## Atak
+
+- [ATAK intro/ettiquette](https://tim.workisboring.com/atak)
+- [ATAK maps](https://tim.workisboring.com/atak/cameras.html)
