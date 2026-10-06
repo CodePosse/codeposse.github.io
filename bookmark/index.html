@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#b45f3c">
     <meta name="color-scheme" content="light dark">
-    <link rel="icon" type="image/x-icon" href="https://codeposse.guthub.io/favicon.ico">
-    <link rel="icon" type="image/png" href="https://codeposse.guthub.io/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="https://codeposse.github.io/favicon.ico">
+    <link rel="icon" type="image/png" href="https://codeposse.github.io/favicon.ico">
     <title>Research List Bookmarklet</title>
     <meta name="description" content="A lightweight personal research bookmarklet for saving, searching, sharing, and exporting useful web pages for later.">
-    <link rel="canonical" href="https://codeposse.guthub.io/bookmark">
+    <link rel="canonical" href="https://codeposse.github.io/bookmark">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -20,8 +20,8 @@
 <meta property="og:site_name" content="Research List">
 <meta property="og:title" content="Research List Bookmarklet">
 <meta property="og:description" content="Save useful pages from anywhere on the web into one searchable personal research list.">
-<meta property="og:url" content="https://codeposse.guthub.io/bookmark">
-<meta property="og:image" content="https://codeposse.guthub.io/img/research-list-social.png">
+<meta property="og:url" content="https://codeposse.github.io/bookmark">
+<meta property="og:image" content="https://codeposse.github.io/img/research-list-social.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Research List bookmarklet for saving pages to revisit later">
@@ -30,7 +30,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Research List Bookmarklet">
 <meta name="twitter:description" content="Save useful pages from anywhere on the web into one searchable personal research list.">
-<meta name="twitter:image" content="https://codeposse.guthub.io/img/research-list-social.png">
+<meta name="twitter:image" content="https://codeposse.github.io/img/research-list-social.png">
 <meta name="twitter:image:alt" content="Research List bookmarklet for saving pages to revisit later">
 
     <!-- Structured data -->
@@ -39,7 +39,7 @@
       "@context": "https://schema.org",
       "@type": "WebApplication",
       "name": "Research List Bookmarklet",
-      "url": "https://codeposse.guthub.io/bookmark",
+      "url": "https://codeposse.github.io/bookmark",
       "description": "A lightweight personal research bookmarklet for saving, searching, sharing, and exporting useful web pages for later.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
@@ -577,7 +577,7 @@
                 id="bookmarklet"
                 class="bookmark"
                 title="Drag this link to your bookmarks bar"
-                href="javascript:(function(){var u=location.href,t=document.title,d='',s='';try{var m=document.querySelector('meta[name=%22description%22],meta[property=%22og:description%22]');if(m)d=m.content||'';s=String(window.getSelection?window.getSelection():'').trim();navigator.clipboard&&navigator.clipboard.writeText(u);}catch(e){}var q='https://codeposse.guthub.io/bookmark?url='+encodeURIComponent(u)+'&title='+encodeURIComponent(t)+'&description='+encodeURIComponent(d)+'&selection='+encodeURIComponent(s);var w=window.open(q,'research-list');if(w)w.focus();})();"
+                href="javascript:(function(){var u=location.href,t=document.title,d='',s='';try{var m=document.querySelector('meta[name=%22description%22],meta[property=%22og:description%22]');if(m)d=m.content||'';s=String(window.getSelection?window.getSelection():'').trim();navigator.clipboard&&navigator.clipboard.writeText(u);}catch(e){}var q='https://codeposse.github.io/bookmark?url='+encodeURIComponent(u)+'&title='+encodeURIComponent(t)+'&description='+encodeURIComponent(d)+'&selection='+encodeURIComponent(s);var w=window.open(q,'research-list');if(w)w.focus();})();"
             ><span class="bookmark-icon" aria-hidden="true">★</span><span>Save to Research</span></a>
             <p class="install-hint">Drag this button to Chrome's bookmarks bar. The same Research List tab will be reused while it remains open.</p>
 
@@ -639,7 +639,7 @@
     'use strict';
 
     const STORAGE_KEY = 'researchSites';
-    const APP_URL = 'https://codeposse.guthub.io/bookmark';
+    const APP_URL = 'https://codeposse.github.io/bookmark';
     let toastTimer;
 
     // This gives the app a stable named browsing context so the bookmarklet
