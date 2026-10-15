@@ -4,7 +4,7 @@
     <!-- Basic document metadata and social/SEO tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#b45f3c">
+    <meta name="theme-color" content="#3b5bdb">
     <meta name="color-scheme" content="light dark">
     <link rel="icon" type="image/x-icon" href="https://codeposse.github.io/favicon.ico">
     <link rel="icon" type="image/png" href="https://codeposse.github.io/favicon.ico">
@@ -58,20 +58,20 @@
          * CSS variables make the light/dark themes easy to adjust in one place.
          */
         :root {
-            --bg: #eee7dc;
-            --panel: rgba(255,250,241,.90);
-            --panel-solid: #fffaf1;
-            --text: #2b2824;
-            --muted: #746c62;
-            --border: #ddd1c1;
-            --accent: #b45f3c;
-            --accent-hover: #93472c;
-            --accent-soft: #f1ddd1;
-            --sage: #68704c;
-            --sage-soft: #e5e7d8;
+            --bg: #eef1f6;
+            --panel: rgba(255,255,255,.90);
+            --panel-solid: #ffffff;
+            --text: #1f2533;
+            --muted: #64708a;
+            --border: #d8deea;
+            --accent: #3b5bdb;
+            --accent-hover: #2f4ac0;
+            --accent-soft: #e3e9fc;
+            --sage: #2f7d6d;
+            --sage-soft: #dcefea;
             --danger: #9c3f35;
-            --danger-soft: #f5dfda;
-            --shadow: 0 14px 36px rgba(72, 56, 43, .10);
+            --danger-soft: #fbe2df;
+            --shadow: 0 14px 36px rgba(30, 41, 66, .10);
             --radius: 18px;
         }
 
@@ -82,8 +82,8 @@
             min-height: 100vh;
             font-family: "PT Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             background:
-                radial-gradient(circle at top left, rgba(180,95,60,.11), transparent 32rem),
-                linear-gradient(180deg, #fbf6ed 0%, var(--bg) 48%, #e8dfd2 100%);
+                radial-gradient(circle at top left, rgba(59,91,219,.11), transparent 32rem),
+                linear-gradient(180deg, #f7f9fc 0%, var(--bg) 48%, #e4e9f2 100%);
             color: var(--text);
         }
 
@@ -158,13 +158,13 @@
             gap: 10px;
             min-height: 48px;
             padding: 12px 17px;
-            background: #2b2824;
-            color: #fffaf1;
+            background: #1f2533;
+            color: #ffffff;
             border: 2px solid var(--accent);
             border-radius: 13px;
             text-decoration: none;
             font-weight: 800;
-            box-shadow: 0 9px 22px rgba(72,56,43,.20);
+            box-shadow: 0 9px 22px rgba(30,41,66,.20);
             cursor: grab;
             user-select: none;
             transition: transform .12s ease, background .12s ease, border-color .12s ease;
@@ -172,7 +172,7 @@
 
         .bookmark:hover {
             transform: translateY(-1px);
-            background: #1f1c19;
+            background: #141a26;
             border-color: var(--accent);
         }
 
@@ -184,7 +184,7 @@
             flex: 0 0 auto;
             border-radius: 999px;
             background: var(--accent);
-            color: #fffaf1;
+            color: #ffffff;
             font-size: 1rem;
             line-height: 1;
         }
@@ -236,7 +236,7 @@
             background: var(--panel);
             border: 1px solid var(--border);
             border-radius: 15px;
-            box-shadow: 0 8px 22px rgba(72,56,43,.06);
+            box-shadow: 0 8px 22px rgba(30,41,66,.06);
         }
 
         .share-strip-copy {
@@ -302,8 +302,8 @@
         }
 
         #search:focus {
-            border-color: rgba(180,95,60,.65);
-            box-shadow: 0 0 0 4px rgba(180,95,60,.12);
+            border-color: rgba(59,91,219,.65);
+            box-shadow: 0 0 0 4px rgba(59,91,219,.12);
         }
 
         .button {
@@ -320,8 +320,8 @@
 
         .button:hover {
             transform: translateY(-1px);
-            border-color: #cbbdaa;
-            background: #f7f0e5;
+            border-color: #b9c3d6;
+            background: #f1f4fa;
         }
 
         .button.primary {
@@ -364,8 +364,8 @@
 
         .item:hover {
             transform: translateY(-1px);
-            border-color: #cfc0ae;
-            box-shadow: 0 10px 28px rgba(72,56,43,.08);
+            border-color: #c3cbdc;
+            box-shadow: 0 10px 28px rgba(30,41,66,.08);
         }
 
         .item-main { min-width: 0; }
@@ -413,7 +413,7 @@
         .item-description {
             margin: 8px 0 0;
             max-width: 830px;
-            color: #5f574e;
+            color: #4a5468;
             line-height: 1.58;
             display: -webkit-box;
             -webkit-box-orient: vertical;
@@ -431,7 +431,7 @@
 
         .item-meta {
             margin-top: 8px;
-            color: #93887b;
+            color: #8590a6;
             font-size: .78rem;
         }
 
@@ -454,8 +454,8 @@
         }
 
         .icon-button:hover {
-            background: #f6eee3;
-            border-color: #cbbdaa;
+            background: #eef2f8;
+            border-color: #b9c3d6;
         }
 
         .icon-button.delete:hover {
@@ -469,7 +469,7 @@
             text-align: center;
             color: var(--muted);
             background: rgba(255,255,255,.58);
-            border: 1px dashed #cfc1af;
+            border: 1px dashed #c3cbdc;
             border-radius: 16px;
         }
 
@@ -488,7 +488,7 @@
             max-width: min(360px, calc(100vw - 40px));
             padding: 11px 15px;
             border-radius: 12px;
-            background: #2b2824;
+            background: #1f2533;
             color: #fff;
             box-shadow: 0 14px 34px rgba(0,0,0,.2);
             opacity: 0;
@@ -530,28 +530,28 @@
 
         @media (prefers-color-scheme: dark) {
             :root {
-                --bg: #1c1916;
-                --panel: rgba(39,35,30,.90);
-                --panel-solid: #29241f;
-                --text: #f4ede3;
-                --muted: #b9ad9f;
-                --border: #494036;
-                --accent: #d07a55;
-                --accent-hover: #df8b66;
-                --accent-soft: #4d3025;
-                --sage: #c0c59d;
-                --sage-soft: #353a2b;
+                --bg: #12161f;
+                --panel: rgba(28,34,46,.90);
+                --panel-solid: #1c222e;
+                --text: #e8ecf4;
+                --muted: #9aa5bb;
+                --border: #313a4c;
+                --accent: #7b93f5;
+                --accent-hover: #93a7f8;
+                --accent-soft: #26315a;
+                --sage: #7fcbb8;
+                --sage-soft: #1d3a34;
                 --danger-soft: #4a2925;
                 --shadow: 0 18px 44px rgba(0,0,0,.30);
             }
             body {
-                background: radial-gradient(circle at top left, rgba(180,95,60,.16), transparent 30rem), #1c1916;
+                background: radial-gradient(circle at top left, rgba(59,91,219,.16), transparent 30rem), #12161f;
             }
-            #search, .button, .icon-button { background: #312b25; color: var(--text); }
-            .item-description { color: #d4c9bc; }
+            #search, .button, .icon-button { background: #232a38; color: var(--text); }
+            .item-description { color: #c3cad8; }
             .domain { color: var(--sage); }
-            .empty { background: rgba(41,36,31,.58); }
-            .button:hover, .icon-button:hover { background: #3a332c; }
+            .empty { background: rgba(28,34,46,.58); }
+            .button:hover, .icon-button:hover { background: #2b3344; }
         }
     </style>
 </head>
