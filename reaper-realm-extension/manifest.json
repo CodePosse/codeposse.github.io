@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Reaper Realm \u2014 Website Destruction",
+  "version": "0.6.0",
+  "description": "Turn the current webpage into a destructible miniature game world, now with an animated 3D GLB Grim Reaper.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_title": "Launch Reaper Realm",
+    "default_popup": "popup.html"
+  },
+  "commands": {
+    "launch-reaper-realm": {
+      "suggested_key": {
+        "default": "Alt+Shift+R"
+      },
+      "description": "Launch Reaper Realm on the current page"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "reaper-sprite.png",
+        "pixel_reaper.glb",
+        "vendor/three/build/three.module.js",
+        "vendor/three/build/three.core.js",
+        "vendor/three/examples/jsm/loaders/GLTFLoader.js",
+        "vendor/three/examples/jsm/utils/BufferGeometryUtils.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}

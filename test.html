@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  background: #0c0f1d;
+  overflow: hidden;
+}
+
+/* The Viewport limits the view and houses our 3D spatial camera context */
+.viewport {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1200px; /* Camera depth configuration */
+}
+
+/* The Scene moves on pitch (X) and yaw (Y) parameters based on JS updates */
+.scene {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  background: linear-gradient(to bottom, #111424, #1a2238);
+  border-radius: 12px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+  transform-style: preserve-3d;
+  
+  /* Transformation calculations mapped directly to our CSS variables */
+  transform: rotateX(calc(var(--rx, 0) * 1deg)) rotateY(calc(var(--ry, 0) * 1deg));
+  transition: transform 0.1s ease-out; /* Smooths out micro-stutters */
+}
+
+/* Absolute placement blueprint for all stacked parallax layers */
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-style: preserve-3d;
+}
+
+/* -- LAYER PARALLAX SPECIFICS via translateZ and variable scaling -- */
+
+.sky {
+  background: radial-gradient(circle at 50% 20%, #202945 0%, transparent 70%);
+  transform: translateZ(10px); /* Deep background layer */
+}
+
+.moon {
+  width: 80px;
+  height: 80px;
+  background: #fbf8eb;
+  border-radius: 50%;
+  top: 15%;
+  left: 65%;
+  box-shadow: 0 0 40px rgba(251, 248, 235, 0.4);
+  /* Moves slightly opposite/slower using calculated X/Y tracking modifiers */
+  transform: translateZ(40px) translate(calc(var(--tx) * -0.2px), calc(var(--ty) * -0.2px));
+}
+
+.lighthouse-container {
+  bottom: 0;
+  transform: translateZ(120px) translate(calc(var(--tx) * 0.4px), calc(var(--ty) * 0.4px));
+}
+
+/* Minimalist CSS Lighthouse Art representation */
+.lighthouse {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 45px;
+  height: 160px;
+  background: linear-gradient(90deg, #e63946 30%, #f1faee 30%, #f1faee 70%, #e63946 70%);
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+
+/* Rotational Lighthouse Beam effect */
+.lighthouse-beam {
+  position: absolute;
+  bottom: 210px;
+  left: 50%;
+  width: 300px;
+  height: 60px;
+  background: transform;
+  transform-origin: left center;
+  background: linear-gradient(90deg, rgba(255,255,150,0.8) 0%, rgba(255,255,150,0) 100%);
+  clip-path: polygon(0 45%, 100% 0, 100% 100%, 0 55%);
+  animation: rotateBeam 8s infinite linear;
+}
+
+.sea {
+  background: linear-gradient(transparent 60%, #1d3557 100%);
+  transform: translateZ(180px) translate(calc(var(--tx) * 0.7px), calc(var(--ty) * 0.7px));
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+@keyframes rotateBeam {
+  0% { transform: rotateY(0deg) rotate(0deg); }
+  100% { transform: rotateY(360deg) rotate(0deg); }
+}
+</style>
+</head>
+<body>
+    <div class="viewport">
+  <div class="scene" id="scene">
+    <!-- Layer 1: Background Sky -->
+    <div class="layer sky"></div>
+    
+    <!-- Layer 2: Distant Stars or Moon -->
+    <div class="layer moon"></div>
+    
+    <!-- Layer 3: The Midground Lighthouse Structure -->
+    <div class="layer lighthouse-container">
+      <div class="lighthouse"></div>
+      <div class="lighthouse-beam"></div>
+    </div>
+    
+    <!-- Layer 4: Foreground Sea Water -->
+    <div class="layer sea"></div>
+  </div>
+</div>
+<script>
+const scene = document.getElementById('scene');
+
+// 1. Current real-time target destinations dictated by mouse position
+let targetX = 0;
+let targetY = 0;
+
+// 2. Interpolated positions that "chase" the targets over time
+let currentX = 0;
+let currentY = 0;
+
+// 3. Interpolation Factor (0.05 = 5% transition step per frame). 
+// Lower values increase smoothing/fluidity; higher values look snappier.
+const lerpFactor = 0.05;
+
+// Max rotation thresholds in degrees
+const maxRotationX = 15;
+const maxRotationY = 15;
+
+// Track the cursor movements globally to update target coordinates
+document.addEventListener('mousemove', (e) => {
+  const centerX = window.innerWidth / 2;
+  const centerY = window.innerHeight / 2;
+
+  // Calculate coordinates relative to screen center
+  targetX = e.clientX - centerX;
+  targetY = e.clientY - centerY;
+});
+
+// Reset targets when the mouse leaves the active window bounds
+document.addEventListener('mouseleave', () => {
+  targetX = 0;
+  targetY = 0;
+});
+
+// 4. Continuous Animation Loop handling Lerp calculations
+function animate() {
+  const centerX = window.innerWidth / 2;
+  const centerY = window.innerHeight / 2;
+
+  // --- LERP FORMULA: current = current + (target - current) * factor ---
+  currentX += (targetX - currentX) * lerpFactor;
+  currentY += (targetY - currentY) * lerpFactor;
+
+  // Standardize values into relative percentage scales (-1 to 1)
+  const percentX = currentX / centerX;
+  const percentY = currentY / centerY;
+
+  // Map percentages to the final spatial output values
+  const rotateX = -(percentY * maxRotationX);
+  const rotateY = percentX * maxRotationY;
+
+  // Push values cleanly to the CSS Custom Variables pipeline
+  scene.style.setProperty('--rx', rotateX.toFixed(2));
+  scene.style.setProperty('--ry', rotateY.toFixed(2));
+  scene.style.setProperty('--tx', currentX.toFixed(2));
+  scene.style.setProperty('--ty', currentY.toFixed(2));
+
+  // Request the browser to trigger this function on the next screen repaint
+  requestAnimationFrame(animate);
+}
+
+// Initialize the loop engine
+requestAnimationFrame(animate);
+
+</script>
+</body>
+</html>
